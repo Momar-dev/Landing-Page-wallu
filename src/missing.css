@@ -1,0 +1,73 @@
+/* Ajouter à la fin de index.css ou au bon endroit */
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.testi-card {
+  background: var(--bg-light);
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.testi-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.testi-avatar {
+  width: 48px;
+  height: 48px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--secondary);
+}
+
+.testi-name {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.testi-role {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.testi-stars {
+  color: #10b981; /* Vert pour les étoiles */
+  margin-bottom: 16px;
+  display: flex;
+  gap: 4px;
+}
+
+.testi-card p {
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.store-badge-img {
+  height: 48px;
+  width: auto;
+  transition: opacity 0.2s ease;
+}
+
+.store-badge:hover .store-badge-img {
+  opacity: 0.8;
+}
+
+.store-badges {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
