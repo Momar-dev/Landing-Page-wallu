@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://wallu.sn/sitemap.xml
-
-# Wallu – wallu.sn
-# Fondateur : Assane SOW
-# Développeur : Momar DIOP
