@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import walluIcon from './icon.png';
@@ -16,6 +16,8 @@ const Icon = ({ name, size = 24, className, style }) => {
   const icons = {
     check: <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />,
     chevronDown: <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />,
+    chevronLeft: <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />,
+    chevronRight: <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />,
     plus: <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />,
     globe: <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />,
     map: <><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></>,
@@ -30,7 +32,10 @@ const Icon = ({ name, size = 24, className, style }) => {
     facebook: <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" strokeLinecap="round" strokeLinejoin="round"/>,
     instagram: <><rect x="2" y="2" width="20" height="20" rx="5" ry="5" strokeLinecap="round" strokeLinejoin="round"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" strokeLinecap="round" strokeLinejoin="round"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" strokeLinecap="round" strokeLinejoin="round"/></>,
     twitter: <path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z" strokeLinecap="round" strokeLinejoin="round"/>,
-    mail: <><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" strokeLinecap="round" strokeLinejoin="round"/><polyline points="22,6 12,13 2,6" strokeLinecap="round" strokeLinejoin="round"/></>
+    mail: <><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" strokeLinecap="round" strokeLinejoin="round"/><polyline points="22,6 12,13 2,6" strokeLinecap="round" strokeLinejoin="round"/></>,
+    linkedin: <><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z" strokeLinecap="round" strokeLinejoin="round"/><rect x="2" y="9" width="4" height="12" strokeLinecap="round" strokeLinejoin="round"/><circle cx="4" cy="4" r="2" strokeLinecap="round" strokeLinejoin="round"/></>,
+    github: <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0018 4.77 5.07 5.07 0 0017.91 1S16.73.65 13 2.48a13.38 13.38 0 00-7 0C2.27.65 1.09 1 1.09 1A5.07 5.07 0 001 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" strokeLinecap="round" strokeLinejoin="round"/>,
+    tiktok: <path d="M9 12a4 4 0 104 4V4a5 5 0 005 5" strokeLinecap="round" strokeLinejoin="round"/>
   };
   return (
     <svg width={size} height={size} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className={className} style={style}>
@@ -107,6 +112,7 @@ const TRANSLATIONS = {
     testiBadge: 'Avis Utilisateurs',
     testiHeading: 'Ce que les Sénégalais disent de Wallu',
     testiSub: 'Des milliers d\'utilisateurs simplifient leur quotidien avec Wallu chaque jour.',
+    testiScrollHint: 'Faites défiler pour voir plus d\'avis',
     faqBadge: 'Questions Fréquentes',
     faqHeading: 'Tout ce que vous voulez savoir',
     faqSub: 'Des questions sur Wallu ? Voici les réponses aux questions les plus courantes.',
@@ -190,6 +196,7 @@ const TRANSLATIONS = {
     testiBadge: 'User Reviews',
     testiHeading: 'What the Senegalese are saying about Wallu',
     testiSub: 'Thousands of users simplify their daily lives with Wallu every day.',
+    testiScrollHint: 'Scroll to see more reviews',
     faqBadge: 'Frequently Asked Questions',
     faqHeading: 'Everything you want to know',
     faqSub: 'Questions about Wallu? Here are the answers to the most common ones.',
@@ -513,6 +520,20 @@ function App() {
   const [activeService, setActiveService] = useState('prestataires');
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const testiRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const updateTestiScroll = () => {
+    const el = testiRef.current;
+    if (!el) return;
+    setCanScrollLeft(el.scrollLeft > 8);
+    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 8);
+  };
+
+  const scrollTestimonials = (direction) => {
+    testiRef.current?.scrollBy({ left: direction * 380, behavior: 'smooth' });
+  };
 
   const toggleLanguage = () => {
     setLang(lang === 'fr' ? 'en' : 'fr');
@@ -534,6 +555,18 @@ function App() {
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
     return () => observer.disconnect();
   }, [lang]); // Re-run when lang changes because text elements might be recreated
+
+  useEffect(() => {
+    updateTestiScroll();
+    const el = testiRef.current;
+    if (!el) return;
+    el.addEventListener('scroll', updateTestiScroll, { passive: true });
+    window.addEventListener('resize', updateTestiScroll);
+    return () => {
+      el.removeEventListener('scroll', updateTestiScroll);
+      window.removeEventListener('resize', updateTestiScroll);
+    };
+  }, [lang]);
 
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -628,7 +661,7 @@ function App() {
 
                 <div className="hero-actions">
                   <div className="store-badge-wrap">
-                    <a href="https://apps.apple.com/app/wallu/id6796547523" target="_blank" rel="noopener noreferrer" className="store-badge">
+                    <a href="https://apps.apple.com/app/id6796547523" target="_blank" rel="noopener noreferrer" className="store-badge">
                       <img src={appleStoreBadge} alt="App Store" />
                     </a>
                     <a href="https://play.google.com/store/apps/details?id=wallu.sn&hl=fr" target="_blank" rel="noopener noreferrer" className="store-badge">
@@ -862,7 +895,7 @@ function App() {
                 <div className="founder-img-frame">
                   <img
                     src={founderPhoto}
-                    alt="Assane Sow – Founder & CEO Wallu"
+                    alt="Assane SOW – Fondateur & Directeur Général de Wallu, application de services au Sénégal"
                   />
                 </div>
                 <div className="founder-img-badge">
@@ -895,9 +928,9 @@ function App() {
                   {t.founderP3}
                 </p>
 
-                <div className="founder-name-block">
-                  <div className="founder-name">Assane Sow</div>
-                  <div className="founder-role">{t.founderRole}</div>
+                <div className="founder-name-block" itemScope itemType="https://schema.org/Person">
+                  <div className="founder-name" itemProp="name">Assane SOW</div>
+                  <div className="founder-role" itemProp="jobTitle">{t.founderRole}</div>
                   <div className="founder-tag">
                     <Icon name="map" size={14} /> Dakar, Sénégal
                   </div>
@@ -916,12 +949,43 @@ function App() {
               <p>{t.testiSub}</p>
             </div>
 
-            <div className="testi-grid">
-              {data.testimonials.map((tInfo, i) => (
-                <div key={i} className="fade-up" style={{ transitionDelay: `${i * 0.08}s` }}>
-                  <TestiCard {...tInfo} />
-                </div>
-              ))}
+            <div className="testi-slider-wrap fade-up">
+              {canScrollLeft && <div className="testi-fade testi-fade-left" aria-hidden="true" />}
+              {canScrollRight && <div className="testi-fade testi-fade-right" aria-hidden="true" />}
+
+              <button
+                type="button"
+                className="testi-arrow testi-arrow-left"
+                onClick={() => scrollTestimonials(-1)}
+                disabled={!canScrollLeft}
+                aria-label={lang === 'fr' ? 'Avis précédents' : 'Previous reviews'}
+              >
+                <Icon name="chevronLeft" size={22} />
+              </button>
+
+              <div className="testi-grid" ref={testiRef}>
+                {data.testimonials.map((tInfo, i) => (
+                  <div key={i} style={{ transitionDelay: `${i * 0.08}s` }}>
+                    <TestiCard {...tInfo} />
+                  </div>
+                ))}
+              </div>
+
+              <button
+                type="button"
+                className="testi-arrow testi-arrow-right"
+                onClick={() => scrollTestimonials(1)}
+                disabled={!canScrollRight}
+                aria-label={lang === 'fr' ? 'Avis suivants' : 'Next reviews'}
+              >
+                <Icon name="chevronRight" size={22} />
+              </button>
+
+              <p className="testi-scroll-hint">
+                <Icon name="chevronLeft" size={14} />
+                {t.testiScrollHint}
+                <Icon name="chevronRight" size={14} />
+              </p>
             </div>
           </div>
         </section>
@@ -954,7 +1018,7 @@ function App() {
 
               <div className="cta-stores">
                 <a
-                  href="https://apps.apple.com/app/wallu/id6796547523"
+                  href="https://apps.apple.com/app/id6796547523"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="cta-store-btn"
@@ -987,8 +1051,8 @@ function App() {
           <div className="contact-cards fade-up">
              <div className="contact-card">
                 <div className="contact-icon"><Icon name="users" size={24} /></div>
-                <h3>Gestion & Partenariats</h3>
-                <p>Pour toute question commerciale ou demande de partenariat.</p>
+                <h3>Assane SOW – Gestion & Partenariats</h3>
+                <p>Pour toute question commerciale ou demande de partenariat avec Wallu.</p>
                 <div className="contact-links-stack">
                   <a href="tel:+221774682474" className="contact-link">+221 77 468 24 74</a>
                   <a href="mailto:assane-service@wallu.sn" className="contact-link">assane-service@wallu.sn</a>
@@ -996,12 +1060,14 @@ function App() {
              </div>
              <div className="contact-card">
                 <div className="contact-icon"><Icon name="mail" size={24} /></div>
-                <h3>Support Développeur</h3>
-                <p>Pour les problèmes techniques ou suggestions sur l'application.</p>
+                <h3>Momar DIOP – Support Développeur</h3>
+                <p>Pour les problèmes techniques ou suggestions sur l'application Wallu.</p>
                 <div className="contact-links-stack">
                   <a href="tel:+221777542053" className="contact-link">+221 77 754 20 53</a>
                   <a href="mailto:support@wallu.sn" className="contact-link">support@wallu.sn</a>
-                  <a href="mailto:momardiop0311@gmail.com" className="contact-link">momardiop0311@gmail.com</a>
+                  <a href="mailto:momardiop091@gmail.com" className="contact-link">momardiop091@gmail.com</a>
+                  <a href="https://www.linkedin.com/in/momar-diop/" target="_blank" rel="noopener noreferrer me" className="contact-link">LinkedIn – Momar DIOP</a>
+                  <a href="https://github.com/Momar-dev" target="_blank" rel="noopener noreferrer me" className="contact-link">GitHub – Momar-dev</a>
                 </div>
              </div>
           </div>
@@ -1021,17 +1087,7 @@ function App() {
               <p className="footer-desc">
                 {t.footerDesc}
               </p>
-              <div className="footer-socials">
-                <a href="https://www.facebook.com/wallusn" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Facebook">
-                  <Icon name="facebook" size={18} />
-                </a>
-                <a href="https://www.instagram.com/wallu.sn" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Instagram">
-                  <Icon name="instagram" size={18} />
-                </a>
-                <a href="https://twitter.com/wallusn" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Twitter / X">
-                  <Icon name="twitter" size={18} />
-                </a>
-              </div>
+
               
               <div className="footer-lang-btn" onClick={toggleLanguage}>
                 <div className="lang-icon-circle">
@@ -1080,21 +1136,23 @@ function App() {
                   <Icon name="mail" size={16} />
                   <a href="mailto:support@wallu.sn">support@wallu.sn</a>
                 </li>
-                <li className="footer-contact-item">
-                  <Icon name="mail" size={16} />
-                  <a href="mailto:momardiop0311@gmail.com">momardiop0311@gmail.com</a>
-                </li>
               </ul>
             </div>
 
           </div>
 
           <div className="footer-bottom">
-            <p>{t.footerRights} • Développé par Momar Diop</p>
-            <div className="footer-bottom-links">
-              <a href="/privacy.html">{t.footerPrivacy}</a>
-              <a href="https://docs.google.com/document/d/1KS3E0WOi-Uj1U6fDjcMuLgjnolnwYCkPQSTaLNID9VA/edit" target="_blank" rel="noopener noreferrer">{t.footerTerms}</a>
+            <div className="footer-bottom-socials">
+              <a href="https://www.instagram.com/wallu.sn?utm_source=qr&igsh=MXFoYjZobzByNWpmaw==" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="Instagram Wallu">
+                <Icon name="instagram" size={20} />
+              </a>
+              <a href="https://www.tiktok.com/@wallusn?_r=1&_t=ZN-98xztShRquU" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="TikTok Wallu">
+                <Icon name="tiktok" size={20} />
+              </a>
             </div>
+            <p className="footer-bottom-text">
+              {t.footerRights} • Développé par <a href="https://www.linkedin.com/in/momar-diop/" target="_blank" rel="noopener noreferrer me" className="footer-credit-link">Momar DIOP</a> • Fondé par <strong className="footer-credit-name">Assane SOW</strong>
+            </p>
           </div>
         </div>
       </footer>
