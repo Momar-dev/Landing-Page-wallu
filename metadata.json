@@ -1,0 +1,6 @@
+{
+  "name": "Wallu",
+  "description": "Wallu – L'application de services N°1 au Sénégal (Landing Page)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

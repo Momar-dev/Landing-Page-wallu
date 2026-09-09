@@ -19,18 +19,25 @@
     <link rel="author" href="https://www.linkedin.com/in/momar-diop/" />
     <link rel="me" href="https://www.linkedin.com/in/momar-diop/" />
     <link rel="me" href="https://github.com/Momar-dev" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="language" content="French" />
     <meta name="geo.region" content="SN" />
     <meta name="geo.placename" content="Dakar, Sénégal" />
+    <meta name="geo.position" content="14.6937;-17.4441" />
+    <meta name="ICBM" content="14.6937, -17.4441" />
     <link rel="canonical" href="https://wallu.sn/" />
+    <link rel="alternate" hreflang="fr-SN" href="https://wallu.sn/" />
+    <link rel="alternate" hreflang="fr" href="https://wallu.sn/" />
+    <link rel="alternate" hreflang="x-default" href="https://wallu.sn/" />
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://wallu.sn/" />
-    <meta property="og:title" content="Wallu – L'application de services N°1 au Sénégal" />
-    <meta property="og:description" content="Trouvez des prestataires vérifiés, faites vos courses (Ndouguilma), commandez une livraison ou achetez local. L'app 100% sénégalaise." />
-    <meta property="og:image" content="https://wallu.sn/og-image.png" />
+    <meta property="og:title" content="Wallu – L'application de services N°1 au Sénégal | Prestataires, Livraison, Courses" />
+    <meta property="og:description" content="Trouvez des prestataires vérifiés (NIN), faites vos courses (Ndouguilma), commandez une livraison ou achetez local. Sans commission, contact direct. App 100% sénégalaise." />
+    <meta property="og:image" content="https://wallu.sn/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="fr_SN" />
     <meta property="og:site_name" content="Wallu" />
 
@@ -38,8 +45,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://wallu.sn/" />
     <meta name="twitter:title" content="Wallu – L'application de services N°1 au Sénégal" />
-    <meta name="twitter:description" content="Prestataires vérifiés, courses, livraisons et marketplace locale. Téléchargez Wallu gratuitement." />
-    <meta name="twitter:image" content="https://wallu.sn/og-image.png" />
+    <meta name="twitter:description" content="Prestataires vérifiés, courses, livraisons et marketplace locale. Téléchargez Wallu gratuitement sur iOS et Android." />
+    <meta name="twitter:image" content="https://wallu.sn/og-image.svg" />
 
     <!-- Structured Data: Organization -->
     <script type="application/ld+json">
@@ -102,7 +109,8 @@
       "sameAs": [
         "https://www.facebook.com/wallusn",
         "https://www.instagram.com/wallu.sn",
-        "https://apps.apple.com/app/id6796547523",
+        "https://www.tiktok.com/@assane.sow_?_r=1&_t=ZN-990Ic78zyWk",
+        "https://apps.apple.com/sn/app/wallu/id6796547523?l=fr-FR",
         "https://play.google.com/store/apps/details?id=wallu.sn"
       ]
     }
@@ -195,17 +203,77 @@
       "name": "Wallu",
       "operatingSystem": "iOS, Android",
       "applicationCategory": "LifestyleApplication",
+      "installUrl": [
+        "https://apps.apple.com/sn/app/wallu/id6796547523?l=fr-FR",
+        "https://play.google.com/store/apps/details?id=wallu.sn"
+      ],
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "XOF"
       },
-      "description": "Application sénégalaise pour trouver des prestataires de services, commander des coursiers et accéder à une marketplace locale.",
+      "description": "Application sénégalaise pour trouver des prestataires de services, commander des coursiers et accéder à une marketplace locale sans commission.",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
-        "ratingCount": "1200"
+        "ratingCount": "1200",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Wallu SN"
       }
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage (Google Rich Snippets) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que Wallu ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wallu est l'application de services N°1 au Sénégal qui vous connecte directement avec des prestataires qualifiés (plombiers, électriciens, menuisiers), des coursiers pour vos courses (Ndouguilma), des livreurs rapides (Yobbuul ma) et une marketplace locale. Sans intermédiaire ni commission."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "L'application Wallu est-elle gratuite ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, Wallu est 100% gratuite à télécharger et à utiliser sur iOS (App Store) et Android (Google Play Store). Vous payez directement le prestataire ou le livreur sans aucune commission prélevée par Wallu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment fonctionne le service de courses Ndouguilma ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vous ouvrez l'application Wallu, vous décrivez votre commission (courses au marché, supermarché, pharmacie, dépôt Wave ou Orange Money), un coursier vérifié avec sa pièce d'identité (NIN) accepte votre demande, fait vos achats et vous livre à domicile."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Les profils d'artisans et coursiers sont-ils vérifiés sur Wallu ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Le Numéro d'Identification Nationale (NIN) et une pièce d'identité officielle sont exigés. De plus, un système d'avis et d'évaluations clients authentiques garantit la transparence et la fiabilité."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dans quelles villes du Sénégal Wallu est-il disponible ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wallu est accessible sur tout le territoire sénégalais : Dakar, Thiès, Touba, Saint-Louis, Ziguinchor, Mbour, Kaolack, Rufisque et dans toutes les régions du Sénégal."
+          }
+        }
+      ]
     }
     </script>
 

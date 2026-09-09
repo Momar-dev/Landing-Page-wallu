@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#052844" />
+      <stop offset="50%" stop-color="#083A64" />
+      <stop offset="100%" stop-color="#0A4E82" />
+    </linearGradient>
+    <radialGradient id="glow" cx="80%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#FFD900" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#FFD900" stop-opacity="0" />
+    </radialGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#glow)" />
+
+  <!-- Decorative circles -->
+  <circle cx="1050" cy="150" r="280" fill="none" stroke="#FFD900" stroke-opacity="0.1" stroke-width="2" />
+  <circle cx="1050" cy="150" r="180" fill="none" stroke="#FFD900" stroke-opacity="0.15" stroke-width="1.5" />
+  <circle cx="150" cy="550" r="220" fill="none" stroke="#FFD900" stroke-opacity="0.08" stroke-width="2" />
+
+  <!-- Left Content -->
+  <g transform="translate(100, 110)">
+    <!-- Badge -->
+    <rect width="320" height="42" rx="21" fill="#FFD900" fill-opacity="0.15" stroke="#FFD900" stroke-opacity="0.4" stroke-width="1.5" />
+    <text x="24" y="27" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFD900" letter-spacing="1">
+      🇸🇳 APPLICATION N°1 AU SÉNÉGAL
+    </text>
+
+    <!-- Main Title -->
+    <text x="0" y="125" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="64" font-weight="800" fill="#FFFFFF" letter-spacing="-1.5">
+      Wallu – Tous vos
+    </text>
+    <text x="0" y="195" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="64" font-weight="800" fill="#FFD900" letter-spacing="-1.5">
+      services &amp; courses
+    </text>
+    <text x="0" y="260" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="40" font-weight="700" fill="#E2E8F0">
+      à portée de main
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="325" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" fill="#94A3B8" font-weight="400">
+      Plombiers, électriciens, coursiers (Ndouguilma), livraison et marketplace.
+    </text>
+    <text x="0" y="358" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" fill="#94A3B8" font-weight="400">
+      0% commission • Contact direct • Disponible sur iOS et Android
+    </text>
+
+    <!-- Badges pill -->
+    <g transform="translate(0, 400)">
+      <!-- Pill 1 -->
+      <rect width="180" height="46" rx="23" fill="#FFFFFF" fill-opacity="0.1" stroke="#FFFFFF" stroke-opacity="0.2" />
+      <text x="24" y="29" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">⭐ 4.8 / 5 Avis</text>
+
+      <!-- Pill 2 -->
+      <rect x="200" width="220" height="46" rx="23" fill="#FFFFFF" fill-opacity="0.1" stroke="#FFFFFF" stroke-opacity="0.2" />
+      <text x="224" y="29" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">🛡️ Profils NIN Vérifiés</text>
+
+      <!-- Pill 3 -->
+      <rect x="440" width="170" height="46" rx="23" fill="#FFD900" />
+      <text x="464" y="29" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="800" fill="#083A64">wallu.sn ➔</text>
+    </g>
+  </g>
+
+  <!-- Right Visual / Logo Shield -->
+  <g transform="translate(860, 160)" filter="url(#shadow)">
+    <!-- App Icon Frame -->
+    <rect width="240" height="240" rx="54" fill="#FFFFFF" />
+    <!-- Yellow Inner Accent -->
+    <rect x="12" y="12" width="216" height="216" rx="44" fill="#083A64" />
+    <text x="120" y="150" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="110" font-weight="900" fill="#FFD900" text-anchor="middle">W</text>
+    
+    <!-- Floating tag -->
+    <g transform="translate(-20, 260)">
+      <rect width="280" height="54" rx="27" fill="#052844" stroke="#FFD900" stroke-width="2" />
+      <text x="140" y="34" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+        Assane SOW &amp; Momar DIOP
+      </text>
+    </g>
+  </g>
+</svg>
