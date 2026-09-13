@@ -6,8 +6,6 @@ import founderPhoto from './Assane Sow.jpeg';
 import appleStoreBadge from './apple store.svg';
 import playStoreBadge from './playstore.svg';
 import appInterfaceImg from './page accueil appli mobile.png';
-const walluAiImg = '/walluai_real.jpg';
-const coursierImg = '/ndouguilma_real.jpg';
 
 
 /* ═══════════════════════════════════════════════════════════
@@ -56,7 +54,12 @@ const Icon = ({ name, size = 24, className, style }) => {
     utensils: <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v7.5M5.25 3v4.5a3 3 0 003 3v10.5m0-18v7.5m3-7.5v4.5a3 3 0 01-3 3M18.75 3v18m0-18a3.75 3.75 0 00-3.75 3.75v5.25c0 1.243.605 2.344 1.538 3.033L16.5 21" />,
     search: <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />,
     lock: <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />,
-    clock: <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+    clock: <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />,
+    fish: <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12c-2.5-3-6-4.5-10.5-4.5A9.75 9.75 0 002.25 12a9.75 9.75 0 006.75 4.5c4.5 0 8-1.5 10.5-4.5zm0 0l2.25-2.25m-2.25 2.25l2.25 2.25M6.75 10.5h.008v.008H6.75V10.5z" />,
+    leaf: <path strokeLinecap="round" strokeLinejoin="round" d="M6 18c0-5 4-10 12-12-1 8-6 12-12 12zm0 0c3-2 6-5 8-8m-8 8l-3 3" />,
+    cross: <path strokeLinecap="round" strokeLinejoin="round" d="M9 4.5h6v4.5h4.5v6H15v4.5H9V15H4.5V9H9V4.5z" />,
+    flag: <path strokeLinecap="round" strokeLinejoin="round" d="M3 21v-4m0 0V4.5a1.5 1.5 0 011.5-1.5h12a1.5 1.5 0 011.2 2.4L16 8l1.7 2.6a1.5 1.5 0 01-1.2 2.4H4.5V17H3z" />,
+    x: <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
   };
   return (
     <svg width={size} height={size} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className={className} style={style}>
@@ -82,14 +85,14 @@ const TRANSLATIONS = {
     heroTitle1: 'Tout ce dont vous ',
     heroTitle2: 'avez besoin,',
     heroTitle3: ' à portée de main',
-    heroSub: 'Wallu connecte chaque Sénégalais à des prestataires vérifiés, des coursiers de confiance, des livreurs et une marketplace locale. Zéro commission, contact direct.',
+    heroSub: 'Wallu connecte chaque Sénégalais à des artisans vérifiés et notés, des coursiers de confiance (Ndouguilma), des livreurs et des commerçants. Une plateforme accessible et transparente avec une forte demande de clients.',
     statProviders: 'Prestataires',
     statProfessions: 'Métiers',
     statCities: 'Villes couvertes',
     trust1: 'Prestataires vérifiés (NIN)',
-    trust2: 'Zéro commission',
+    trust2: 'Forte demande de clients',
     trust3: 'Partout au Sénégal',
-    trust4: '4.8 ★ sur les stores',
+    trust4: 'Note 4.8/5 sur les stores',
     trust5: 'Contact direct, sans intermédiaire',
     whyBadge: 'Pourquoi Wallu',
     whyHeading: 'Conçu pour la réalité sénégalaise',
@@ -110,11 +113,11 @@ const TRANSLATIONS = {
       {
         id: 'commission',
         icon: 'shield',
-        badge: 'Transparence totale',
-        stat: '0% Commission',
-        title: 'Zéro commission & Paiement direct',
-        desc: 'Vous traitez directement avec le prestataire par appel ou WhatsApp. Aucun intermédiaire, aucun frais caché sur vos transactions.',
-        highlights: ['Contact direct WhatsApp/Appel', 'Paiement Wave, OM ou Espèces'],
+        badge: 'Transparence & Accès',
+        stat: 'Forte Demande',
+        title: 'Plateforme accessible & Forte demande',
+        desc: 'Une plateforme accessible et transparente pour les prestataires et clients. Un flux constant de demandes au quotidien, contact direct et relations équitables.',
+        highlights: ['Forte demande de clients qualifiés', 'Contact direct WhatsApp & Appel', 'Conditions claires et transparentes'],
         color: '#0A6EBD',
         accentColor: '#38BDF8',
         featured: false
@@ -123,7 +126,7 @@ const TRANSLATIONS = {
         id: 'personne',
         icon: 'users',
         badge: 'Services à Domicile',
-        stat: 'Profils notés 4.8★',
+        stat: 'Profils notés 4.8/5',
         title: 'Aide à la personne & Vie de famille',
         desc: 'Ménage régulier, repassage, nounous de confiance et gardes d\'enfants. Des prestataires bienveillants évalués par la communauté.',
         highlights: ['Avis clients certifiés', 'Disponibilité flexible'],
@@ -170,37 +173,37 @@ const TRANSLATIONS = {
     ],
     partnerBadge: 'Réseau Partenaires',
     partnerHeading: 'Rejoignez l\'écosystème Wallu & développez votre activité',
-    partnerSub: 'Une plateforme 100% gratuite et transparente pour chaque artisan, livreur et commerçant du Sénégal.',
+    partnerSub: 'Une plateforme accessible et transparente avec une forte demande de clients pour chaque artisan, coursier et commerçant du Sénégal.',
     partner1Title: 'Artisans & Prestataires',
-    partner1Desc: 'Vous avez un savoir-faire ? Rejoignez Wallu pour trouver des clients près de chez vous et augmenter vos revenus. Forte demande client et zéro commission.',
+    partner1Desc: 'Vous avez un savoir-faire ? Rejoignez Wallu pour répondre à une forte demande de clients près de chez vous et augmenter vos revenus sur une plateforme accessible et transparente.',
     partner1Btn: 'Devenir prestataire',
-    partner1Tags: ['0% Commission', 'Paiement direct', 'Clients à proximité'],
+    partner1Tags: ['Forte demande clients', 'Paiement direct', 'Modèle transparent'],
     partner2Title: 'Livreurs & Coursiers',
     partner2Desc: 'Devenez livreur partenaire et gagnez de l\'argent à votre rythme. Que vous ayez une moto "Tiak-Tiak" ou une camionnette, inscrivez-vous facilement.',
     partner2Btn: 'Devenir livreur',
     partner2Tags: ['Horaires flexibles', 'Moto ou Fourgon', 'Gains immédiats'],
     partner3Title: 'Commerçants & Boutiques',
-    partner3Desc: 'Vous avez des articles à vendre ? Créez votre boutique sur Wallu Vente, touchez des milliers d\'acheteurs partout au Sénégal et vendez sans frais.',
+    partner3Desc: 'Vous avez des articles à vendre ? Créez votre boutique sur Wallu Vente, touchez des milliers d\'acheteurs partout au Sénégal et profitez d\'une forte visibilité.',
     partner3Btn: 'Créer ma boutique',
-    partner3Tags: ['0 frais de vente', 'Vitrine digitale', 'Portée nationale'],
+    partner3Tags: ['Forte visibilité', 'Vitrine digitale', 'Portée nationale'],
     interfaceBadge: 'Interface',
     interfaceHeading: 'Découvrez l\'application',
     interfaceSub: 'Une interface claire, intuitive et pensée pour faciliter votre quotidien au Sénégal.',
     srvBadge: 'Nos Services',
     srvHeading: 'Les 5 piliers de Wallu',
     srvSub: 'Une seule application pour tous vos besoins du quotidien.',
-    profBadge: 'Tous les métiers',
-    profHeading: 'Des experts pour chaque besoin',
-    profSub: 'Wallu réunit plus de 26 corps de métiers disponibles dans tout le Sénégal. Filtrez par catégorie ou recherchez votre spécialiste.',
-    profSearchPlaceholder: 'Rechercher un métier (ex: plombier, carreleur, nounou...)',
+    profBadge: 'Plus de 30 métiers',
+    profHeading: 'Des artisans vérifiés et notés',
+    profSub: 'Wallu réunit plus de 30 corps de métiers disponibles dans tout le Sénégal. Des artisans vérifiés et notés par la communauté, prêts à intervenir.',
+    profSearchPlaceholder: 'Rechercher un métier (ex: plombier, carreleur, climatisation, nounou...)',
     profNotFound: 'Aucun métier ne correspond à votre recherche.',
     profResetSearch: 'Réinitialiser la recherche',
     profFoundCount: 'métiers disponibles',
     profAvailableTag: 'Disponible',
     profCtaTitle: 'Vous exercez un métier et souhaitez trouver des clients ?',
-    profCtaSub: 'Rejoignez les 1200+ prestataires vérifiés de Wallu, développez votre visibilité et augmentez vos revenus sans payer aucune commission.',
+    profCtaSub: 'Rejoignez les 1200+ prestataires vérifiés de Wallu, développez votre visibilité et augmentez vos revenus grâce à une forte demande de clients sur une plateforme accessible et transparente.',
     profCtaBtn: 'S\'inscrire comme prestataire',
-    profCtaTag: '100% Gratuit & Zéro commission',
+    profCtaTag: 'Plateforme accessible & Forte demande',
     founderBadge: 'Mon histoire',
     founderQuote: 'Wallu est né d\'un constat simple : trouver un prestataire de confiance au Sénégal relevait trop souvent du bouche-à-oreille ou du hasard. Nous avons décidé de changer ça.',
     founderP1: 'Wallu a été créée avec une ambition claire : digitaliser l\'économie locale du Sénégal en donnant à chaque artisan, coursier et commerçant les outils pour se faire connaître et prospérer, et à chaque famille le moyen de trouver des services fiables en quelques secondes.',
@@ -243,14 +246,14 @@ const TRANSLATIONS = {
     heroTitle1: 'Everything you ',
     heroTitle2: 'need,',
     heroTitle3: ' at your fingertips',
-    heroSub: 'Wallu connects every Senegalese to verified service providers, trusted couriers, delivery drivers, and a local marketplace. Zero commission, direct contact.',
+    heroSub: 'Wallu connects every Senegalese to verified and rated artisans, trusted couriers (Ndouguilma), delivery drivers, and local merchants. An accessible and transparent platform with high customer demand.',
     statProviders: 'Providers',
     statProfessions: 'Professions',
     statCities: 'Cities covered',
     trust1: 'Verified Providers (NIN)',
-    trust2: 'Zero Commission',
+    trust2: 'High customer demand',
     trust3: 'Everywhere in Senegal',
-    trust4: '4.8 ★ on stores',
+    trust4: '4.8/5 on app stores',
     trust5: 'Direct contact, no middleman',
     whyBadge: 'Why Wallu',
     whyHeading: 'Designed for the Senegalese reality',
@@ -271,11 +274,11 @@ const TRANSLATIONS = {
       {
         id: 'commission',
         icon: 'shield',
-        badge: 'Total Transparency',
-        stat: '0% Commission',
-        title: 'Zero commission & Direct payment',
-        desc: 'Deal directly with providers via phone call or WhatsApp. No middlemen, no hidden fees on your transactions.',
-        highlights: ['Direct WhatsApp/Call contact', 'Wave, OM or Cash payment'],
+        badge: 'Transparency & Access',
+        stat: 'High Demand',
+        title: 'Accessible platform & High client demand',
+        desc: 'An accessible and transparent platform with steady customer volume to grow your business. Direct contact, fair and clear terms.',
+        highlights: ['High daily customer demand', 'Direct WhatsApp & Phone contact', 'Clear and transparent terms'],
         color: '#0A6EBD',
         accentColor: '#38BDF8',
         featured: false
@@ -284,7 +287,7 @@ const TRANSLATIONS = {
         id: 'personne',
         icon: 'users',
         badge: 'Home Services',
-        stat: '4.8★ Rated Profiles',
+        stat: '4.8/5 Rated Profiles',
         title: 'Personal Assistance & Family Life',
         desc: 'Regular housekeeping, ironing, trusted nannies, and babysitters. Caring service providers rated by the community.',
         highlights: ['Certified user reviews', 'Flexible schedule'],
@@ -331,37 +334,37 @@ const TRANSLATIONS = {
     ],
     partnerBadge: 'Partner Network',
     partnerHeading: 'Join the Wallu ecosystem & grow your business',
-    partnerSub: 'A 100% free and transparent platform for every artisan, driver, and merchant in Senegal.',
+    partnerSub: 'An accessible and transparent platform with high customer demand for every artisan, driver, and merchant in Senegal.',
     partner1Title: 'Artisans & Providers',
-    partner1Desc: 'Do you have a skill? Join Wallu to find clients near you and increase your income. High customer demand and zero commission.',
+    partner1Desc: 'Do you have a skill? Join Wallu to meet high customer demand near you and grow your business on an accessible and transparent platform.',
     partner1Btn: 'Become a provider',
-    partner1Tags: ['0% Commission', 'Direct payment', 'Nearby clients'],
+    partner1Tags: ['High customer demand', 'Direct payment', 'Transparent model'],
     partner2Title: 'Delivery Partners & Couriers',
     partner2Desc: 'Become a delivery partner and earn money at your own pace. Whether you have a "Tiak-Tiak" moto or a van, sign up easily.',
     partner2Btn: 'Become a driver',
     partner2Tags: ['Flexible hours', 'Moto or Van', 'Instant earnings'],
     partner3Title: 'Merchants & Shops',
-    partner3Desc: 'Have items to sell? Create your shop on Wallu Vente, reach thousands of buyers across Senegal and sell without fees.',
+    partner3Desc: 'Have items to sell? Create your shop on Wallu Vente, reach thousands of buyers across Senegal and gain high visibility.',
     partner3Btn: 'Create my shop',
-    partner3Tags: ['0 selling fees', 'Digital storefront', 'Nationwide reach'],
+    partner3Tags: ['High visibility', 'Digital storefront', 'Nationwide reach'],
     interfaceBadge: 'Interface',
     interfaceHeading: 'Discover the app',
     interfaceSub: 'A clear, intuitive interface designed to simplify your daily life in Senegal.',
     srvBadge: 'Our Services',
     srvHeading: 'The 5 pillars of Wallu',
     srvSub: 'A single app for all your daily needs.',
-    profBadge: 'All Professions',
-    profHeading: 'Experts for every need',
-    profSub: 'Wallu brings together over 26 professions available throughout Senegal. Filter by category or search your specialist.',
-    profSearchPlaceholder: 'Search a profession (e.g. plumber, tiler, nanny...)',
+    profBadge: 'Over 30 professions',
+    profHeading: 'Verified and rated artisans',
+    profSub: 'Wallu brings together over 30 professions available throughout Senegal. Verified and rated artisans ready to assist you.',
+    profSearchPlaceholder: 'Search a profession (e.g. plumber, tiler, air conditioning, nanny...)',
     profNotFound: 'No profession found matching your search.',
     profResetSearch: 'Reset search',
     profFoundCount: 'professions available',
     profAvailableTag: 'Available',
     profCtaTitle: 'Have a trade and want to find more clients?',
-    profCtaSub: 'Join 1200+ verified Wallu service providers, boost your visibility, and increase your income with zero commission.',
+    profCtaSub: 'Join 1200+ verified Wallu service providers, boost your visibility, and increase your income with high customer demand on an accessible and transparent platform.',
     profCtaBtn: 'Register as a provider',
-    profCtaTag: '100% Free & Zero commission',
+    profCtaTag: 'Accessible platform & High demand',
     founderBadge: 'My Story',
     founderQuote: 'Wallu was born from a simple observation: finding a reliable provider in Senegal too often relied on word-of-mouth or chance. We decided to change that.',
     founderP1: 'Wallu was created with a clear ambition: to digitize the local economy of Senegal by giving every artisan, courier, and merchant the tools to become known and prosper, and every family the means to find reliable services in seconds.',
@@ -411,7 +414,10 @@ const DATA = {
       { name: 'Carreleur', icon: 'tools', cat: 'habitat', tag: 'Pose & Finition' },
       { name: 'Menuisier', icon: 'tools', cat: 'habitat', tag: 'Bois & Mobilier' },
       { name: 'Maçon', icon: 'home', cat: 'habitat', tag: 'Gros œuvre & BTP' },
+      { name: 'Climatiseur / Frigoriste', icon: 'zap', cat: 'habitat', tag: 'Clim & Froid' },
       { name: 'Serrurier', icon: 'lock', cat: 'habitat', tag: 'Ouverture 24/7' },
+      { name: 'Vitrier', icon: 'tools', cat: 'habitat', tag: 'Vitres & Miroiterie' },
+      { name: 'Tapissier / Rembourreur', icon: 'scissors', cat: 'habitat', tag: 'Salons & Canapés' },
       { name: 'Jardinier', icon: 'sparkles', cat: 'habitat', tag: 'Espaces verts' },
       { name: 'Loueur de matériel', icon: 'package', cat: 'habitat', tag: 'Outillage & BTP' },
       // Service à la personne
@@ -419,17 +425,21 @@ const DATA = {
       { name: 'Homme de ménage', icon: 'sparkles', cat: 'personne', tag: 'Nettoyage pro' },
       { name: 'Aide-ménagère', icon: 'sparkles', cat: 'personne', tag: 'Aide quotidienne' },
       { name: 'Nounou / Baby-sitter', icon: 'heart', cat: 'personne', tag: 'Garde d\'enfants' },
+      { name: 'Agent de sécurité / Gardien', icon: 'shield', cat: 'personne', tag: 'Gardiennage' },
+      { name: 'Cuisinier à domicile', icon: 'utensils', cat: 'personne', tag: 'Cuisine locale' },
       // Mobilité & Transport
       { name: 'Livreur express', icon: 'bike', cat: 'mobilite', tag: 'Tiak-Tiak & Colis' },
-      { name: 'Dépanneur', icon: 'zap', cat: 'mobilite', tag: 'Assistance auto' },
+      { name: 'Dépanneur auto', icon: 'zap', cat: 'mobilite', tag: 'Assistance route' },
       { name: 'Chauffeur de taxi', icon: 'car', cat: 'mobilite', tag: 'Trajets urbains' },
       { name: 'Chauffeur VTC', icon: 'car', cat: 'mobilite', tag: 'Confort & Sécurité' },
       { name: 'Remorqueur', icon: 'truck', cat: 'mobilite', tag: 'Remorquage 24/7' },
-      { name: 'Mécanicien', icon: 'wrench', cat: 'mobilite', tag: 'Garage & Diagnostic' },
+      { name: 'Mécanicien', icon: 'wrench', cat: 'mobilite', tag: 'Garage & Moteur' },
+      { name: 'Électricien auto', icon: 'zap', cat: 'mobilite', tag: 'Batterie & Diagnostic' },
       // Bien-être & Santé
       { name: 'Coach sportif', icon: 'star', cat: 'sante', tag: 'Remise en forme' },
       { name: 'Psychologue', icon: 'heart', cat: 'sante', tag: 'Écoute & Conseil' },
       { name: 'Masseur / Masseuse', icon: 'heart', cat: 'sante', tag: 'Relaxation' },
+      { name: 'Esthéticienne / Manucure', icon: 'sparkles', cat: 'sante', tag: 'Soins & Beauté' },
       // Artisanat & Création
       { name: 'Couturier / Tailleur', icon: 'scissors', cat: 'artisanat', tag: 'Tenues sur mesure' },
       { name: 'Coiffeur / Coiffeuse', icon: 'scissors', cat: 'artisanat', tag: 'Domicile & Salon' },
@@ -439,74 +449,71 @@ const DATA = {
     ],
     services: [
       {
+        id: 'ndouguilma',
+        icon: 'shopping',
+        label: 'Ndouguilma (Courses marché)',
+        title: 'Vos courses au marché livrées sans bouger',
+        desc: 'Confiez vos commissions aux marchés sénégalais à un coursier de confiance. Légumes frais à Kermel ou Castors, poisson thiof à Soumbédioune, viande fraîche, pharmacie de garde ou retraits Wave : tout est acheté avec soin et livré chez vous en 45 minutes chrono.',
+        features: [
+          'Marchés locaux en direct : Marché Kermel, Castors, Sandaga, Tilène, Soumbédioune et commerces de proximité.',
+          'Confiance absolue : Le NIN (pièce d\'identité) est obligatoire et certifié pour tous nos coursiers.',
+          'Livraison express en 45 min : Gagnez un temps précieux sans affronter la chaleur ni les embouteillages.',
+          'Paiement et retraits flexibles : Wave, Orange Money ou Espèces à la livraison.',
+        ],
+        color: '#0A6EBD'
+      },
+      {
         id: 'prestataires',
         icon: 'users',
-        label: 'Prestataires',
+        label: 'Prestataires (30+ métiers)',
         title: 'Des artisans vérifiés et notés',
-        desc: 'Besoin d\'un plombier, électricien, menuisier ou d\'une nounou ? Accédez à plus de 26 métiers différents. Comparez les profils, vérifiez les avis, et contactez-les directement.',
+        desc: 'Besoin d\'un plombier, électricien, menuisier, frigoriste ou d\'une nounou ? Accédez à plus de 30 métiers différents. Des artisans vérifiés et notés par la communauté. Comparez les profils, vérifiez les avis, et contactez-les directement.',
         features: [
-          'Zéro commission : Contact direct via Appel ou WhatsApp, aucun frais caché.',
-          'Sécurité absolue : Tous les prestataires fournissent leur pièce d\'identité (NIN).',
-          'Hyper-Localisation : Trouvez les meilleurs artisans juste à côté de chez vous.',
+          'Artisans vérifiés et notés : Des professionnels qualifiés avec identités certifiées (NIN) et avis clients réels.',
+          'Plateforme accessible & Forte demande : Flux constant de demandes, contact direct sans intermédiaire via Appel ou WhatsApp.',
+          'Accédez à plus de 30 métiers : Plomberie, électricité, froid & climatisation, maçonnerie, menuiserie, carrelage...',
+          'Hyper-Localisation : Trouvez les meilleurs artisans juste à côté de chez vous en quelques secondes.',
         ],
-        color: '#083A64',
-        image: '/artisan_real.jpg'
+        color: '#083A64'
       },
       {
         id: 'yobbuulma',
         icon: 'truck',
-        label: 'Yobbuul ma',
+        label: 'Yobbuul ma (Livraison)',
         title: 'Livraison express en moto ou camionnette',
-        desc: 'Que ce soit un petit colis urgent ou un déménagement, nos livreurs partenaires sont disponibles. Choisissez la moto "Tiak-Tiak" pour les petits plis ou la camionnette pour les grandes livraisons.',
+        desc: 'Que ce soit un petit colis urgent ou un déménagement complet, nos livreurs partenaires sont disponibles partout au Sénégal. Choisissez la moto "Tiak-Tiak" pour les courses rapides ou la camionnette pour les charges lourdes.',
         features: [
-          'Rapide & Flexible : Moto pour la ville, camionnette pour le lourd.',
-          'Zéro commission : Payez directement le livreur au juste prix.',
-          'Couverture nationale : Expédiez vos colis partout au Sénégal.',
+          'Rapide & Flexible : Moto Tiak-Tiak pour la ville, camionnette pour les encombrants.',
+          'Tarifs transparents : Payez directement le livreur selon la course convenue.',
+          'Couverture nationale : Expédiez vos colis partout au Sénégal sans stress.',
         ],
-        color: '#FFD900',
-        image: '/yobbuulma_real.jpg'
-      },
-      {
-        id: 'ndouguilma',
-        icon: 'shopping',
-        label: 'Ndouguilma',
-        title: 'Vos courses au marché, sans bouger',
-        desc: 'Confiez vos commissions à un coursier de confiance. Listez vos besoins (légumes frais, pharmacie, boutique, dépôt d\'argent) et il s\'en charge pour vous.',
-        features: [
-          'Polyvalent : Supermarché, pharmacie, marché local, Wave ou Orange Money.',
-          'Confiance totale : Le NIN est obligatoire pour tous nos coursiers.',
-          'Livraison directe : Gagnez du temps et restez chez vous.',
-        ],
-        color: '#0A6EBD',
-        image: coursierImg
+        color: '#FFD900'
       },
       {
         id: 'vente',
         icon: 'shopping',
-        label: 'Wallu Vente',
+        label: 'Wallu Vente (Marketplace)',
         title: 'Achetez et vendez partout au Sénégal',
-        desc: 'Wallu Vente est votre marketplace 100% sénégalaise. Mettez en vente vos articles et atteignez des acheteurs dans tout le pays. Le contact est direct.',
+        desc: 'Wallu Vente est votre marketplace 100% sénégalaise. Mettez en vente vos articles et atteignez des milliers d\'acheteurs dans tout le pays. Contact direct et transparent.',
         features: [
-          'Zéro commission : Vendez sans frais, gardez 100% de vos revenus.',
-          'Vendeurs vérifiés : Un écosystème de confiance pour acheter sereinement.',
-          'Catégories variées : Mode, électronique, véhicules, immobilier, food.',
+          'Forte visibilité : Touchez des milliers de clients locaux et développez vos ventes.',
+          'Vendeurs vérifiés : Un écosystème accessible, transparent et de confiance pour acheter sereinement.',
+          'Catégories variées : Mode, électronique, véhicules, immobilier, alimentation locale.',
         ],
-        color: '#FFD900',
-        image: '/client.png'
+        color: '#FFD900'
       },
       {
         id: 'walluai',
         icon: 'star',
         label: 'Wallu AI',
         title: 'Votre assistant intelligent intégré',
-        desc: 'Besoin d\'aide pour trouver un service ou utiliser l\'application ? Wallu AI, propulsé par les dernières technologies, est là pour vous guider.',
+        desc: 'Besoin d\'aide pour trouver un service ou utiliser l\'application ? Wallu AI, propulsé par les dernières technologies, est là pour vous guider instantanément.',
         features: [
-          'Texte : Écrivez naturellement à l\'assistant pour formuler vos demandes.',
-          'Recherche instantanée : Trouvez immédiatement le bon prestataire ou service.',
+          'Texte & Vocal : Écrivez naturellement à l\'assistant pour formuler vos demandes.',
+          'Recherche instantanée : Trouvez immédiatement le bon artisan, coursier ou produit.',
           'Assistance 24/7 : Wallu AI ne dort jamais et vous aide à tout moment.',
         ],
-        color: '#083A64',
-        image: walluAiImg
+        color: '#083A64'
       },
     ],
     testimonialsStats: {
@@ -533,7 +540,7 @@ const DATA = {
         letter: 'M',
         name: 'Moussa Diop',
         role: 'Client particulier',
-        city: 'Pikine Tally Boumack',
+        city: 'Pikine',
         service: 'Plomberie • Urgence 22h',
         verified: true,
         rating: 5,
@@ -546,11 +553,11 @@ const DATA = {
         name: 'Aminata Sow',
         role: 'Commerçante Mode',
         city: 'Thiès',
-        service: 'Wallu Vente • 0% Commission',
+        service: 'Wallu Vente • Forte visibilité',
         verified: true,
         rating: 5,
         date: 'Il y a 1 semaine',
-        text: 'Mes ventes ont explosé depuis que j\'ai ouvert ma boutique sur Wallu Vente. Les clients m\'appellent directement sur WhatsApp et Wallu ne prélève aucun franc de commission. Révolutionnaire !'
+        text: 'Mes ventes ont explosé depuis que j\'ai ouvert ma boutique sur Wallu Vente. Une forte demande de clients au quotidien, ils m\'appellent directement sur WhatsApp et les conditions sont claires et transparentes. Top !'
       },
       {
         id: '4',
@@ -574,7 +581,7 @@ const DATA = {
         verified: true,
         rating: 5,
         date: 'Il y a 2 semaines',
-        text: 'Je suis artisan inscrit sur Wallu depuis 6 mois. Mon carnet de commandes est plein sans avoir dépensé un franc en publicité. C\'est la fierté de l\'artisanat sénégalais.'
+        text: 'Je suis artisan inscrit sur Wallu depuis 6 mois. Mon carnet de commandes est plein grâce à une forte demande de clients réguliers. C\'est la fierté de l\'artisanat sénégalais.'
       },
       {
         id: '6',
@@ -590,12 +597,12 @@ const DATA = {
       }
     ],
     faqs: [
-      { q: 'Qu\'est-ce que Wallu ?', a: 'Wallu est une super-application sénégalaise qui vous connecte directement avec des prestataires, des coursiers pour vos commissions (Ndouguilma), des livreurs (Yobbuul ma) et une marketplace. Sans intermédiaire ni commission.' },
-      { q: 'L\'application est-elle gratuite ?', a: 'Oui, Wallu est 100% gratuit à télécharger et à utiliser. Vous payez directement le prestataire ou le vendeur selon le prix convenu. Wallu ne prend aucune commission sur vos transactions.' },
-      { q: 'Comment fonctionne Ndouguilma ?', a: 'Vous ouvrez l\'app, décrivez votre commission (marché, pharmacie, Wave, etc.), un coursier vérifié accepte la demande, effectue les achats et vous livre.' },
-      { q: 'Les profils sont-ils vraiment vérifiés ?', a: 'Oui. La pièce d\'identité nationale (NIN) est exigée, notamment pour les coursiers. En plus, le système d\'avis et de badges "Top Profil" garantit la confiance.' },
-      { q: 'Comment fonctionne Wallu AI ?', a: 'C\'est un assistant intégré. Vous pouvez lui écrire ou lui parler directement dans l\'application pour lui demander de trouver un plombier, de vous expliquer comment vendre un article, etc.' },
-      { q: 'Wallu est disponible dans quelle ville ?', a: 'De Dakar à Saint-Louis, de Ziguinchor à Tambacounda, Wallu couvre tout le territoire national avec plus de 70 villes couvertes.' },
+      { q: 'Qu\'est-ce que Wallu ?', a: 'Wallu est une super-application sénégalaise qui vous connecte directement avec des artisans vérifiés et notés, des coursiers pour vos commissions (Ndouguilma), des livreurs (Yobbuul ma) et une marketplace locale (Wallu Vente). Une plateforme accessible et transparente avec une forte demande de clients.' },
+      { q: 'L\'application est-elle gratuite ?', a: 'L\'application Wallu est gratuite à télécharger sur l\'App Store et Google Play. Pour les artisans et commerçants, Wallu offre une plateforme moderne, accessible et transparente avec une forte demande de clients, garantissant un modèle équitable sans frais cachés.' },
+      { q: 'Comment fonctionne Ndouguilma ?', a: 'Vous ouvrez l\'app, décrivez votre commission (marché Kermel, Castors, Sandaga, pharmacie de garde, retraits Wave, etc.), un coursier vérifié accepte la demande, effectue les achats avec soin et vous livre en 45 minutes.' },
+      { q: 'Les profils sont-ils vraiment vérifiés ?', a: 'Oui. La pièce d\'identité nationale (NIN) est exigée et vérifiée avec rigueur. En plus, le système d\'avis et d\'évaluations certifiés par les clients garantit une totale confiance.' },
+      { q: 'Comment fonctionne Wallu AI ?', a: 'C\'est un assistant intelligent intégré. Vous pouvez lui écrire directement dans l\'application pour lui demander de trouver un artisan, un coursier ou un produit disponible.' },
+      { q: 'Wallu est disponible dans quelle ville ?', a: 'De Dakar à Saint-Louis, de Thiès à Touba et Ziguinchor, Wallu couvre tout le territoire sénégalais avec plus de 70 villes actives.' },
     ]
   },
   en: {
@@ -615,7 +622,10 @@ const DATA = {
       { name: 'Tiler', icon: 'tools', cat: 'habitat', tag: 'Tiling & Finishing' },
       { name: 'Carpenter', icon: 'tools', cat: 'habitat', tag: 'Wood & Furniture' },
       { name: 'Mason', icon: 'home', cat: 'habitat', tag: 'Construction & Masonry' },
+      { name: 'AC & Refrigeration Tech', icon: 'zap', cat: 'habitat', tag: 'Cooling & AC' },
       { name: 'Locksmith', icon: 'lock', cat: 'habitat', tag: '24/7 Lockout' },
+      { name: 'Glazier', icon: 'tools', cat: 'habitat', tag: 'Glass & Mirrors' },
+      { name: 'Upholsterer', icon: 'scissors', cat: 'habitat', tag: 'Sofas & Furniture' },
       { name: 'Gardener', icon: 'sparkles', cat: 'habitat', tag: 'Green Spaces' },
       { name: 'Tool Rental', icon: 'package', cat: 'habitat', tag: 'Tools & Construction' },
       // Personal Services
@@ -623,17 +633,21 @@ const DATA = {
       { name: 'Housekeeper (M)', icon: 'sparkles', cat: 'personne', tag: 'Pro Cleaning' },
       { name: 'Home Helper', icon: 'sparkles', cat: 'personne', tag: 'Daily Assistance' },
       { name: 'Nanny / Baby-sitter', icon: 'heart', cat: 'personne', tag: 'Childcare' },
+      { name: 'Security Guard', icon: 'shield', cat: 'personne', tag: 'Property Security' },
+      { name: 'Home Cook / Chef', icon: 'utensils', cat: 'personne', tag: 'Local Cuisine' },
       // Mobility & Transport
       { name: 'Express Courier', icon: 'bike', cat: 'mobilite', tag: 'Tiak-Tiak & Parcels' },
-      { name: 'Breakdown Service', icon: 'zap', cat: 'mobilite', tag: 'Auto Assistance' },
+      { name: 'Roadside Assistance', icon: 'zap', cat: 'mobilite', tag: 'Auto Assistance' },
       { name: 'Taxi Driver', icon: 'car', cat: 'mobilite', tag: 'City Rides' },
       { name: 'VTC Driver', icon: 'car', cat: 'mobilite', tag: 'Comfort & Safety' },
       { name: 'Tow Truck', icon: 'truck', cat: 'mobilite', tag: '24/7 Towing' },
-      { name: 'Mechanic', icon: 'wrench', cat: 'mobilite', tag: 'Garage & Diagnosis' },
+      { name: 'Mechanic', icon: 'wrench', cat: 'mobilite', tag: 'Garage & Engine' },
+      { name: 'Auto Electrician', icon: 'zap', cat: 'mobilite', tag: 'Battery & Diagnostics' },
       // Health & Wellness
       { name: 'Sports Coach', icon: 'star', cat: 'sante', tag: 'Fitness & Health' },
       { name: 'Psychologist', icon: 'heart', cat: 'sante', tag: 'Counseling' },
       { name: 'Masseur / Masseuse', icon: 'heart', cat: 'sante', tag: 'Relaxation' },
+      { name: 'Beautician / Esthetician', icon: 'sparkles', cat: 'sante', tag: 'Skincare & Nails' },
       // Craft & Events
       { name: 'Tailor', icon: 'scissors', cat: 'artisanat', tag: 'Custom Fashion' },
       { name: 'Hairdresser', icon: 'scissors', cat: 'artisanat', tag: 'Home & Salon' },
@@ -643,74 +657,71 @@ const DATA = {
     ],
     services: [
       {
+        id: 'ndouguilma',
+        icon: 'shopping',
+        label: 'Ndouguilma (Market Errands)',
+        title: 'Your market shopping delivered to your door',
+        desc: 'Entrust your shopping in Senegalese markets to a trusted courier. Fresh produce at Kermel or Castors, fresh fish at Soumbédioune, meat, urgent pharmacy runs or Wave cash withdrawals: everything is picked carefully and delivered in 45 minutes.',
+        features: [
+          'Direct local markets: Kermel, Castors, Sandaga, Tilène, Soumbédioune, and neighborhood shops.',
+          'Total trust: National ID (NIN) is mandatory and verified for all courier partners.',
+          '45-minute express delivery: Save valuable time without facing the heat and traffic.',
+          'Flexible payment: Wave, Orange Money or Cash upon delivery.',
+        ],
+        color: '#0A6EBD'
+      },
+      {
         id: 'prestataires',
         icon: 'users',
-        label: 'Providers',
-        title: 'Verified artisans rated by the community',
-        desc: 'Need a plumber, electrician, carpenter or a nanny? Access over 26 different professions. Compare profiles, check reviews, and contact them directly via call or WhatsApp.',
+        label: 'Providers (30+ trades)',
+        title: 'Verified and rated artisans',
+        desc: 'Need a plumber, electrician, carpenter, AC technician or a nanny? Access over 30 different trades. Compare profiles, check reviews, and contact them directly via call or WhatsApp.',
         features: [
-          'Zero Commission: Direct contact via Call or WhatsApp, no hidden fees.',
-          'Absolute Security: All providers submit their National ID (NIN).',
-          'Hyper-Localization: Find the best artisans right in your neighborhood.',
+          'Verified and rated artisans: Qualified professionals with verified National IDs (NIN) and real client reviews.',
+          'Accessible platform & High demand: Steady flow of requests, direct contact without middlemen.',
+          'Over 30 trades: Plumbing, electrical, air conditioning, masonry, carpentry, tiling and more.',
+          'Hyper-Localization: Find the best nearby artisans in seconds.',
         ],
-        color: '#083A64',
-        image: '/artisan_real.jpg'
+        color: '#083A64'
       },
       {
         id: 'yobbuulma',
         icon: 'truck',
-        label: 'Yobbuul ma',
+        label: 'Yobbuul ma (Delivery)',
         title: 'Express delivery by moto or van',
-        desc: 'Whether it\'s an urgent small package to deliver or a complete move, our delivery partners are available. Choose the moto for small items or the van for large deliveries.',
+        desc: 'Whether it\'s an urgent package or a full move, our delivery partners are available throughout Senegal. Choose the "Tiak-Tiak" moto for fast runs or the van for heavy loads.',
         features: [
-          'Fast & Flexible: Moto for the city, van for heavy loads.',
-          'Zero Commission: Pay the driver directly at a fair price.',
-          'National Coverage: Ship your packages anywhere in Senegal.',
+          'Fast & Flexible: Moto for the city, van for heavy cargo.',
+          'Transparent rates: Pay the driver directly at fair agreed terms.',
+          'National coverage: Ship your parcels anywhere in Senegal stress-free.',
         ],
-        color: '#FFD900',
-        image: '/yobbuulma_real.jpg'
-      },
-      {
-        id: 'ndouguilma',
-        icon: 'shopping',
-        label: 'Ndouguilma',
-        title: 'Your errands run for you',
-        desc: 'Entrust your shopping and errands to a trusted courier. List your needs (fresh vegetables, pharmacy, shop, money deposit) and they take care of it.',
-        features: [
-          'Versatile: Supermarket, pharmacy, local market, Wave or Orange Money.',
-          'Total Trust: NIN is mandatory for all our couriers.',
-          'Direct Delivery: Save time and stay comfortable at home.',
-        ],
-        color: '#0A6EBD',
-        image: coursierImg
+        color: '#FFD900'
       },
       {
         id: 'vente',
         icon: 'shopping',
-        label: 'Wallu Vente',
+        label: 'Wallu Vente (Marketplace)',
         title: 'Buy and sell everywhere in Senegal',
-        desc: 'Wallu Vente is your 100% Senegalese marketplace. Sell your items and reach buyers across the country. Contact is direct.',
+        desc: 'Wallu Vente is your 100% Senegalese marketplace. List your items and reach thousands of buyers across the country with direct, transparent contact.',
         features: [
-          'Zero Commission: Sell for free, keep 100% of your earnings.',
-          'Verified Sellers: A trusted ecosystem to buy with peace of mind.',
-          'Varied Categories: Fashion, electronics, vehicles, real estate, food.',
+          'High visibility: Reach thousands of local buyers and scale your business.',
+          'Verified sellers: An accessible, transparent, and trusted ecosystem to buy with peace of mind.',
+          'Varied categories: Fashion, electronics, vehicles, real estate, local food.',
         ],
-        color: '#FFD900',
-        image: '/client.png'
+        color: '#FFD900'
       },
       {
         id: 'walluai',
         icon: 'star',
         label: 'Wallu AI',
         title: 'Your built-in smart assistant',
-        desc: 'Need help finding a service or using the app? Wallu AI is here to guide you.',
+        desc: 'Need help finding a service or using the app? Wallu AI is here to guide you instantly.',
         features: [
-          'Text: Write naturally to the assistant to make your requests.',
-          'Instant Search: Find the right provider or service immediately.',
-          '24/7 Support: Wallu AI never sleeps and helps you anytime.',
+          'Text & Voice: Write naturally to the assistant to submit your requests.',
+          'Instant search: Find the right artisan, courier or product immediately.',
+          '24/7 support: Wallu AI never sleeps and assists you anytime.',
         ],
-        color: '#083A64',
-        image: walluAiImg
+        color: '#083A64'
       },
     ],
     testimonialsStats: {
@@ -730,14 +741,14 @@ const DATA = {
         verified: true,
         rating: 5,
         date: '2 days ago',
-        text: 'The Ndouguilma service saved me! With my bank job, I no longer have time to go to the market. The courier delivered ultra-fresh vegetables in 45 minutes. Dieureudieuf Wallu!'
+        text: 'The Ndouguilma service saved me! With my bank job, I no longer have time to go to Kermel market. The courier delivered ultra-fresh vegetables in 45 minutes. Dieureudieuf Wallu!'
       },
       {
         id: '2',
         letter: 'M',
         name: 'Moussa Diop',
         role: 'Homeowner',
-        city: 'Pikine Tally Boumack',
+        city: 'Pikine',
         service: 'Plumbing • 10PM Emergency',
         verified: true,
         rating: 5,
@@ -750,11 +761,11 @@ const DATA = {
         name: 'Aminata Sow',
         role: 'Fashion Merchant',
         city: 'Thiès',
-        service: 'Wallu Vente • 0% Commission',
+        service: 'Wallu Vente • High Visibility',
         verified: true,
         rating: 5,
         date: '1 week ago',
-        text: 'My sales skyrocketed since opening my shop on Wallu Vente. Clients message me directly on WhatsApp and Wallu takes zero commission. Truly revolutionary!'
+        text: 'My sales skyrocketed since opening my shop on Wallu Vente. High customer demand daily, clients reach me directly on WhatsApp and terms are transparent. Excellent!'
       },
       {
         id: '4',
@@ -778,7 +789,7 @@ const DATA = {
         verified: true,
         rating: 5,
         date: '2 weeks ago',
-        text: 'I\'ve been an artisan on Wallu for 6 months. My schedule is full without spending a dime on ads. It\'s the pride of Senegalese craftsmanship.'
+        text: 'I\'ve been an artisan on Wallu for 6 months. My schedule is full thanks to steady customer demand on the platform. It\'s the pride of Senegalese craftsmanship.'
       },
       {
         id: '6',
@@ -794,11 +805,11 @@ const DATA = {
       }
     ],
     faqs: [
-      { q: 'What is Wallu?', a: 'Wallu is a Senegalese super-app that connects you directly with service providers, couriers for your errands (Ndouguilma), delivery drivers (Yobbuul ma) and a local marketplace. Without middleman or commission.' },
-      { q: 'Is the app free?', a: 'Yes, Wallu is 100% free to download and use. You pay the provider or seller directly according to the agreed price. Wallu takes zero commission on your transactions.' },
-      { q: 'How does Ndouguilma work?', a: 'You open the app, describe your errand (market, pharmacy, Wave, etc.), a trusted courier accepts the request, does the shopping and delivers to you.' },
-      { q: 'Are the profiles truly verified?', a: 'Yes. The National Identity Card (NIN) is required, especially for couriers. Plus, the rating system and "Top Profile" badges guarantee trust.' },
-      { q: 'How does Wallu AI work?', a: 'It\'s a built-in assistant. You can text or speak to it directly in the app to ask it to find a plumber, explain how to sell an item, etc.' },
+      { q: 'What is Wallu?', a: 'Wallu is a Senegalese super-app that connects you directly with verified and rated artisans, market couriers (Ndouguilma), delivery drivers (Yobbuul ma) and a local marketplace. An accessible and transparent platform with high customer demand.' },
+      { q: 'Is the app free?', a: 'Wallu is free to download on the App Store and Google Play. For artisans and merchants, Wallu provides an accessible and transparent platform with high customer demand and fair terms.' },
+      { q: 'How does Ndouguilma work?', a: 'You open the app, describe your errand (Kermel, Castors, Sandaga, pharmacy, Wave, etc.), a NIN-verified courier accepts, picks up the items, and delivers to you in 45 minutes.' },
+      { q: 'Are the profiles truly verified?', a: 'Yes. National ID (NIN) verification is strictly enforced. In addition, ratings and verified customer reviews ensure absolute trust.' },
+      { q: 'How does Wallu AI work?', a: 'It\'s an integrated smart assistant. You can text it directly in the app to find an artisan, courier, or local item instantly.' },
       { q: 'In which cities is Wallu available?', a: 'Everywhere in Senegal! Dakar, Thiès, Saint-Louis, Touba, Ziguinchor, Kaolack, Mbour and all other towns.' },
     ]
   },
@@ -871,7 +882,7 @@ function TestiCard({ letter, name, role, city, service, verified, rating = 5, da
           {date || 'Avis vérifié'}
         </span>
         <span className="testi-foot-flag">
-          🇸🇳 Expérience Wallu
+          <Icon name="shield" size={12} style={{ color: 'var(--blue)' }} /> Expérience Wallu Sénégal
         </span>
       </div>
     </div>
@@ -902,12 +913,13 @@ function App() {
   const t = TRANSLATIONS[lang];
   const data = DATA[lang];
 
-  const [activeService, setActiveService] = useState('prestataires');
+  const [activeService, setActiveService] = useState('ndouguilma');
   const [activeProfCat, setActiveProfCat] = useState('all');
   const [profSearch, setProfSearch] = useState('');
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showLegalModal, setShowLegalModal] = useState(false);
+  const [selectedMarket, setSelectedMarket] = useState('castors');
   const testiRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -964,6 +976,30 @@ function App() {
     };
   }, [lang]);
 
+  // Handle Escape key to close modal or mobile menu
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setShowLegalModal(false);
+        setMenuOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  // Lock body scroll when legal modal is open
+  useEffect(() => {
+    if (showLegalModal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [showLegalModal]);
+
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     setMenuOpen(false);
@@ -974,7 +1010,12 @@ function App() {
       {/* ── HEADER ─────────────────────────────────────────── */}
       <header style={{ boxShadow: scrolled ? '0 4px 24px rgba(0,0,0,0.15)' : 'none' }}>
         <div className="nav-inner">
-          <div className="nav-logo">
+          <div 
+            className="nav-logo" 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+            style={{ cursor: 'pointer' }}
+            title="Wallu - Accueil"
+          >
             <img src={walluIcon} alt="Wallu Logo" />
             Wallu
           </div>
@@ -992,7 +1033,16 @@ function App() {
               <button className="lang-btn" onClick={toggleLanguage} aria-label="Changer de langue">
                 <Icon name="globe" size={15} /> {t.langBtn}
               </button>
-              <a href="#download" className="btn-nav">{t.navDownload}</a>
+              <a 
+                href="#download" 
+                className="btn-nav"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollTo('download');
+                }}
+              >
+                {t.navDownload}
+              </a>
             </div>
 
             <button
@@ -1024,7 +1074,18 @@ function App() {
                 <a onClick={() => scrollTo('founder')} style={{ color: 'rgba(255,255,255,0.85)', fontWeight: 600, cursor: 'pointer', fontSize: '1rem' }}>{t.navFounder}</a>
                 <a onClick={() => scrollTo('testimonials')} style={{ color: 'rgba(255,255,255,0.85)', fontWeight: 600, cursor: 'pointer', fontSize: '1rem' }}>{t.navAvis}</a>
                 <a onClick={() => scrollTo('faq')} style={{ color: 'rgba(255,255,255,0.85)', fontWeight: 600, cursor: 'pointer', fontSize: '1rem' }}>{t.navFaq}</a>
-                <a href="#download" className="btn-nav" style={{ textAlign: 'center' }} onClick={() => setMenuOpen(false)}>{t.navDownloadFree}</a>
+                <a 
+                  href="#download" 
+                  className="btn-nav" 
+                  style={{ textAlign: 'center' }} 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMenuOpen(false);
+                    scrollTo('download');
+                  }}
+                >
+                  {t.navDownloadFree}
+                </a>
                 <button className="lang-btn" onClick={toggleLanguage} style={{ justifyContent: 'center' }}>
                   <Icon name="globe" size={16} /> {t.langBtn}
                 </button>
@@ -1045,8 +1106,10 @@ function App() {
                 transition={{ duration: 0.8, ease: 'easeOut' }}
               >
                 <div className="hero-eyebrow">
-                  <span></span>
-                  🇸🇳 {t.heroEyebrow}
+                  <span className="hero-eyebrow-flag">
+                    <Icon name="flag" size={13} style={{ color: 'var(--yellow)', marginRight: '4px' }} />
+                  </span>
+                  {t.heroEyebrow}
                 </div>
 
                 <h1>
@@ -1057,13 +1120,48 @@ function App() {
                   {t.heroSub}
                 </p>
 
+                {/* Service Ndouguilma mis en avant dès la première page */}
+                <div className="hero-ndouguilma-highlight">
+                  <a 
+                    href="#ndouguilma-spotlight" 
+                    className="hero-ndouguilma-card"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollTo('ndouguilma-spotlight');
+                    }}
+                  >
+                    <div className="nd-card-header">
+                      <div className="nd-card-left">
+                        <span className="nd-pulse"></span>
+                        <span className="nd-badge">
+                          <Icon name="shopping" size={13} /> {lang === 'fr' ? 'Ndouguilma' : 'Ndouguilma'}
+                        </span>
+                        <span className="nd-tag-fast">
+                          <Icon name="clock" size={11} /> {lang === 'fr' ? '45 min chrono' : '45 min'}
+                        </span>
+                      </div>
+                      <div className="nd-card-right">
+                        <span className="nd-cta-label">{lang === 'fr' ? 'Découvrir' : 'Explore'}</span>
+                        <Icon name="arrowRight" size={13} className="nd-arrow" />
+                      </div>
+                    </div>
+                    <div className="nd-card-body">
+                      <p className="nd-desc">
+                        {lang === 'fr' 
+                          ? 'Courses aux marchés Kermel, Castors & livraisons express à domicile' 
+                          : 'Market errands from Kermel, Castors & doorstep express delivery'}
+                      </p>
+                    </div>
+                  </a>
+                </div>
+
                 <div className="hero-stats">
                   <div className="stat-item">
                     <div className="stat-num">+1 200</div>
                     <div className="stat-label">{t.statProviders}</div>
                   </div>
                   <div className="stat-item">
-                    <div className="stat-num">26+</div>
+                    <div className="stat-num">30+</div>
                     <div className="stat-label">{t.statProfessions}</div>
                   </div>
                   <div className="stat-item">
@@ -1096,6 +1194,8 @@ function App() {
                     src={appInterfaceImg} 
                     alt="Application mobile Wallu Sénégal" 
                     className="hero-mockup-img" 
+                    fetchPriority="high"
+                    decoding="async"
                   />
                 </div>
               </motion.div>
@@ -1125,6 +1225,179 @@ function App() {
                   <span>{item.text}</span>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── SPOTLIGHT NDOUGUILMA (RESSORTI DÈS LA PREMIÈRE PAGE) ── */}
+        <section id="ndouguilma-spotlight" className="ndouguilma-spotlight">
+          <div className="container">
+            <div className="section-header fade-up">
+              <div className="section-badge" style={{ background: 'rgba(255, 217, 0, 0.15)', color: 'var(--yellow)', borderColor: 'rgba(255, 217, 0, 0.4)' }}>
+                <Icon name="shopping" size={14} />
+                <span>{lang === 'fr' ? 'Service Vedette • Ndouguilma Sénégal' : 'Featured Service • Ndouguilma Senegal'}</span>
+              </div>
+              <h2>
+                {lang === 'fr' ? (
+                  <>Ndouguilma : <span className="highlight">Vos courses au marché</span> livrées à domicile en 45 min</>
+                ) : (
+                  <>Ndouguilma Express: <span className="highlight">Fresh market errands</span> delivered to your doorstep</>
+                )}
+              </h2>
+              <p>
+                {lang === 'fr' 
+                  ? 'Kermel, Castors, Soumbédioune ou pharmacie de garde : confiez votre liste à un coursier certifié NIN, paiement sécurisé et livraison directe chez vous en 45 minutes.'
+                  : 'Kermel, Castors, Soumbédioune or on-duty pharmacy: entrust your errand list to a NIN-certified courier with guaranteed 45-minute delivery.'}
+              </p>
+            </div>
+
+            <div className="nd-spotlight-grid">
+              {/* Left Column: Steps & Markets */}
+              <div className="fade-up">
+                <div className="nd-steps-container">
+                  <div className="nd-step-card">
+                    <div className="nd-step-num">1</div>
+                    <div className="nd-step-title">{lang === 'fr' ? 'Rédigez votre liste' : 'Write your errand list'}</div>
+                    <div className="nd-step-desc">
+                      {lang === 'fr' 
+                        ? 'Indiquez vos besoins (légumes, poissons frais, viandes, ordonnances...) et le marché souhaité.'
+                        : 'List fresh vegetables, daily fish, meats or urgent pharmacy items with your market of choice.'}
+                    </div>
+                  </div>
+
+                  <div className="nd-step-card">
+                    <div className="nd-step-num">2</div>
+                    <div className="nd-step-title">{lang === 'fr' ? 'Coursier dédié vérifié' : 'Dedicated verified courier'}</div>
+                    <div className="nd-step-desc">
+                      {lang === 'fr' 
+                        ? 'Un coursier certifié NIN prend en charge votre commande et sélectionne les meilleurs produits avec soin.'
+                        : 'A NIN-certified courier accepts your run and carefully selects the freshest market produce.'}
+                    </div>
+                  </div>
+
+                  <div className="nd-step-card">
+                    <div className="nd-step-num">3</div>
+                    <div className="nd-step-title">{lang === 'fr' ? 'Transparence totale' : 'Total transparency'}</div>
+                    <div className="nd-step-desc">
+                      {lang === 'fr' 
+                        ? 'Preuve d\'achat et ticket en photo en direct sur WhatsApp. Aucun frais caché.'
+                        : 'Live receipt and item photos directly via WhatsApp. Zero hidden charges.'}
+                    </div>
+                  </div>
+
+                  <div className="nd-step-card">
+                    <div className="nd-step-num">4</div>
+                    <div className="nd-step-title">{lang === 'fr' ? 'Livraison en 45 min' : '45-minute delivery'}</div>
+                    <div className="nd-step-desc">
+                      {lang === 'fr' 
+                        ? 'Réception directe à domicile ou au bureau. Paiement simple en espèces ou Wave.'
+                        : 'Door-to-door delivery at home or office. Simple payment in cash or via Wave.'}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Markets covered bar */}
+                <div className="nd-markets-bar">
+                  <div className="nd-markets-label">
+                    <Icon name="map" size={14} />
+                    <span>{lang === 'fr' ? 'Marchés & commerces couverts à Dakar & régions :' : 'Markets covered across Dakar & regions:'}</span>
+                  </div>
+                  <div className="nd-markets-chips">
+                    {[
+                      { id: 'soumbedioune', icon: 'fish', label: 'Soumbédioune (Poisson frais)' },
+                      { id: 'castors', icon: 'leaf', label: 'Castors (Légumes & condiments)' },
+                      { id: 'kermel', icon: 'shopping', label: 'Kermel (Épicerie & fruits)' },
+                      { id: 'sandaga', icon: 'tag', label: 'Sandaga & Tilène (Habillement)' },
+                      { id: 'pharmacie', icon: 'cross', label: 'Pharmacie de garde 24/7' },
+                    ].map(m => (
+                      <span 
+                        key={m.id}
+                        className={`nd-market-chip ${selectedMarket === m.id ? 'active' : ''}`}
+                        onClick={() => setSelectedMarket(m.id)}
+                        style={{ cursor: 'pointer' }}
+                        role="button"
+                        tabIndex={0}
+                      >
+                        <Icon name={m.icon} size={14} />
+                        {m.label}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Interactive Live Simulation Card */}
+              <div className="fade-up">
+                <div className="nd-live-card">
+                  <div className="nd-live-header">
+                    <div className="nd-live-title">
+                      <Icon name="shopping" size={20} style={{ color: 'var(--yellow)' }} />
+                      <span>{lang === 'fr' ? 'Course Ndouguilma en direct' : 'Live Ndouguilma Errand'}</span>
+                    </div>
+                    <div className="nd-live-status-badge">
+                      <span className="nd-pulse"></span>
+                      <span>{lang === 'fr' ? 'En cours • Castors' : 'In progress • Castors'}</span>
+                    </div>
+                  </div>
+
+                  <div className="nd-courier-box">
+                    <div className="nd-courier-avatar">OD</div>
+                    <div style={{ flex: 1 }}>
+                      <div className="nd-courier-name">
+                        <span>Oumar Diallo</span>
+                        <span className="bento-check"><Icon name="shield" size={11} /> NIN Vérifié</span>
+                      </div>
+                      <div className="nd-courier-sub">
+                        <Icon name="star" size={12} style={{ color: 'var(--yellow)', display: 'inline', verticalAlign: 'middle' }} /> 4.9 (142 courses livrées) • Moto Tiak-Tiak
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="nd-checklist">
+                    <div className="nd-check-item done">
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <div className="nd-check-icon"><Icon name="check" size={14} /></div>
+                        <span>2 kg Thiof frais du jour (Soumbédioune)</span>
+                      </div>
+                      <span style={{ color: '#4ade80', fontWeight: 700, fontSize: '0.78rem' }}>Prêt</span>
+                    </div>
+
+                    <div className="nd-check-item done">
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <div className="nd-check-icon"><Icon name="check" size={14} /></div>
+                        <span>Légumes pour Thiéboudienne (Marché Castors)</span>
+                      </div>
+                      <span style={{ color: '#4ade80', fontWeight: 700, fontSize: '0.78rem' }}>Prêt</span>
+                    </div>
+
+                    <div className="nd-check-item">
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                        <div className="nd-check-icon pending"><Icon name="clock" size={13} /></div>
+                        <span>Pharmacie de garde (Ordonnance express)</span>
+                      </div>
+                      <span style={{ color: 'var(--yellow)', fontWeight: 700, fontSize: '0.78rem' }}>Achat en cours</span>
+                    </div>
+                  </div>
+
+                  <div className="nd-live-footer">
+                    <div className="nd-live-eta">
+                      <div>{lang === 'fr' ? 'Livraison estimée :' : 'Estimated arrival:'} <strong>~ 25 min</strong></div>
+                      <div style={{ fontSize: '0.75rem', opacity: 0.7 }}>{lang === 'fr' ? 'Plateforme accessible & transparente' : 'Accessible & transparent platform'}</div>
+                    </div>
+                    <a 
+                      href="#download" 
+                      className="nd-order-btn"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollTo('download');
+                      }}
+                    >
+                      <Icon name="shopping" size={16} />
+                      <span>{lang === 'fr' ? 'Lancer ma course' : 'Start errand'}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -1184,7 +1457,14 @@ function App() {
                   </div>
 
                   <div className="why-card-footer">
-                    <a href="#download" className="why-card-link">
+                    <a 
+                      href="#professions" 
+                      className="why-card-link"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        scrollTo('professions');
+                      }}
+                    >
                       <span>{lang === 'fr' ? 'Découvrir les prestataires' : 'Explore providers'}</span>
                       <Icon name="arrowRight" size={14} />
                     </a>
@@ -1233,7 +1513,14 @@ function App() {
                     </div>
                   </div>
                   <p className="partner-card-desc">{t.partner1Desc}</p>
-                  <a href="#download" className="partner-card-action">
+                  <a 
+                    href="#download" 
+                    className="partner-card-action"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollTo('download');
+                    }}
+                  >
                     <span>{t.partner1Btn}</span>
                     <Icon name="arrowRight" size={16} />
                   </a>
@@ -1255,7 +1542,14 @@ function App() {
                     </div>
                   </div>
                   <p className="partner-card-desc">{t.partner2Desc}</p>
-                  <a href="#download" className="partner-card-action">
+                  <a 
+                    href="#download" 
+                    className="partner-card-action"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollTo('download');
+                    }}
+                  >
                     <span>{t.partner2Btn}</span>
                     <Icon name="arrowRight" size={16} />
                   </a>
@@ -1277,7 +1571,14 @@ function App() {
                     </div>
                   </div>
                   <p className="partner-card-desc">{t.partner3Desc}</p>
-                  <a href="#download" className="partner-card-action">
+                  <a 
+                    href="#download" 
+                    className="partner-card-action"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollTo('download');
+                    }}
+                  >
                     <span>{t.partner3Btn}</span>
                     <Icon name="arrowRight" size={16} />
                   </a>
@@ -1293,6 +1594,8 @@ function App() {
                     src={appInterfaceImg} 
                     alt="Interface Wallu Sénégal sur smartphone" 
                     className="interface-mockup-img" 
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="interface-stat-pill pill-top">
                     <div className="stat-pill-icon"><Icon name="shield" size={14} /></div>
@@ -1304,8 +1607,8 @@ function App() {
                   <div className="interface-stat-pill pill-bottom">
                     <div className="stat-pill-icon stat-icon-gold"><Icon name="zap" size={14} /></div>
                     <div className="stat-pill-content">
-                      <strong>0% Commission</strong>
-                      <span>100% de vos gains</span>
+                      <strong>{lang === 'fr' ? 'Forte Demande' : 'High Demand'}</strong>
+                      <span>{lang === 'fr' ? 'Clients actifs au quotidien' : 'Active daily customers'}</span>
                     </div>
                   </div>
                 </div>
@@ -1360,7 +1663,10 @@ function App() {
                 >
                   <div className="service-panel-inner">
                     <div className="sp-content">
-                      <div className="sp-eyebrow" style={{ color: 'var(--yellow)', borderColor: 'rgba(255,217,0,0.4)', background: 'rgba(255,217,0,0.12)' }}>✦ {s.label}</div>
+                      <div className="sp-eyebrow" style={{ color: 'var(--yellow)', borderColor: 'rgba(255,217,0,0.4)', background: 'rgba(255,217,0,0.12)', display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+                        <Icon name="sparkles" size={13} />
+                        {s.label}
+                      </div>
                       <h3 className="sp-title">{s.title}</h3>
                       <p className="sp-desc">{s.desc}</p>
                       
@@ -1404,7 +1710,7 @@ function App() {
                           <div className="bento-quick-tags">
                             <span className="bento-tag yellow"><Icon name="zap" size={13} /> Intervention rapide</span>
                             <span className="bento-tag green"><span className="live-dot"></span> En ligne</span>
-                            <span className="bento-tag blue"><Icon name="shield" size={13} /> 0% Commission</span>
+                            <span className="bento-tag blue"><Icon name="shield" size={13} /> Modèle transparent</span>
                           </div>
 
                           <div className="bento-body">
@@ -1412,17 +1718,22 @@ function App() {
                               <Icon name="shield" size={16} style={{ color: 'var(--yellow)', flexShrink: 0 }} /> Pièce d'identité nationale (NIN) certifiée par l'équipe Wallu
                             </div>
                             <div className="bento-guarantee" style={{ fontSize: '0.84rem', color: 'rgba(255, 255, 255, 0.8)' }}>
-                              <Icon name="check" size={15} style={{ color: '#4ade80', flexShrink: 0 }} /> Paiement direct sans intermédiaire • 0% Commission
+                              <Icon name="check" size={15} style={{ color: '#4ade80', flexShrink: 0 }} /> Paiement direct sans intermédiaire • Tarifs clairs et transparents
                             </div>
                           </div>
 
                           <div className="bento-actions">
-                            <a href="tel:+221" className="bento-btn bento-btn-call">
-                              <Icon name="phone" size={15} /> Appeler directement
+                            <a href="tel:+221774682474" className="bento-btn bento-btn-call">
+                              <Icon name="phone" size={15} /> {lang === 'fr' ? 'Appeler directement' : 'Call directly'}
                             </a>
-                            <div className="bento-btn bento-btn-wa">
+                            <a 
+                              href="https://wa.me/221774682474?text=Bonjour%20Wallu%2C%20je%20recherche%20un%20prestataire" 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className="bento-btn bento-btn-wa"
+                            >
                               <Icon name="messageSquare" size={15} /> WhatsApp
-                            </div>
+                            </a>
                           </div>
                         </div>
                       )}
@@ -1524,7 +1835,7 @@ function App() {
                             <div className="bento-badge-pill" style={{ background: 'rgba(255, 217, 0, 0.15)', color: '#FFD900' }}>
                               <Icon name="tag" size={15} /> Wallu Vente Marketplace
                             </div>
-                            <span className="bento-tag yellow"><Icon name="shield" size={12} /> 0% Commission</span>
+                            <span className="bento-tag yellow"><Icon name="shield" size={12} /> Forte visibilité</span>
                           </div>
 
                           <div className="marketplace-grid-preview">
@@ -1580,15 +1891,25 @@ function App() {
                               <div className="ai-text">
                                 J'ai trouvé <strong>3 artisans vérifiés NIN</strong> disponibles immédiatement à <strong>Yoff</strong>.
                                 <div className="ai-rec-card">
-                                  <span><Icon name="wrench" size={13} style={{ display: 'inline', marginRight: '4px' }} /> <strong>Alioune Cissé</strong> (★ 4.9)</span>
+                                  <span><Icon name="wrench" size={13} style={{ display: 'inline', marginRight: '4px' }} /> <strong>Alioune Cissé</strong> (<Icon name="star" size={12} style={{ display: 'inline', color: 'var(--yellow)', verticalAlign: '-1px' }} /> 4.9)</span>
                                   <span className="ai-dist">à 800m • Dispo</span>
                                 </div>
                               </div>
                             </div>
                           </div>
 
-                          <div className="ai-input-bar">
-                            <span className="ai-placeholder">Posez votre question à Wallu AI...</span>
+                          <div 
+                            className="ai-input-bar"
+                            style={{ cursor: 'pointer' }}
+                            onClick={() => {
+                              setProfSearch('Plombier');
+                              scrollTo('professions');
+                            }}
+                            title={lang === 'fr' ? 'Tester une recherche dans Wallu' : 'Try searching in Wallu'}
+                          >
+                            <span className="ai-placeholder">
+                              {lang === 'fr' ? 'Poser une question à Wallu AI (ex: Plombier, Électricien...)' : 'Ask Wallu AI (e.g. Plumber, Electrician...)'}
+                            </span>
                             <div className="ai-send-btn"><Icon name="arrowRight" size={14} /></div>
                           </div>
                         </div>
@@ -1609,7 +1930,7 @@ function App() {
             <div className="section-header fade-up">
               <div className="section-badge badge-blue">
                 <Icon name="tools" size={15} />
-                <span>{t.profBadge} • 26+ Métiers</span>
+                <span>{t.profBadge} • {lang === 'fr' ? '30+ Métiers' : '30+ Professions'}</span>
               </div>
               <h2>
                 {lang === 'fr' ? (
@@ -1657,7 +1978,7 @@ function App() {
                       onClick={() => setProfSearch('')}
                       aria-label="Clear search"
                     >
-                      ✕
+                      <Icon name="x" size={13} />
                     </button>
                   )}
                 </div>
@@ -1695,7 +2016,14 @@ function App() {
                     </div>
 
                     <div className="prof-card-bottom-row">
-                      <a href="#download" className="prof-action-link">
+                      <a 
+                        href="#download" 
+                        className="prof-action-link"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          scrollTo('download');
+                        }}
+                      >
                         <span>{lang === 'fr' ? 'Trouver un pro' : 'Find a pro'}</span>
                         <Icon name="arrowRight" size={13} />
                       </a>
@@ -1732,7 +2060,14 @@ function App() {
                 <p className="prof-banner-sub">{t.profCtaSub}</p>
               </div>
               <div className="prof-banner-right">
-                <a href="#download" className="btn btn-yellow prof-banner-cta-btn">
+                <a 
+                  href="#download" 
+                  className="btn btn-yellow prof-banner-cta-btn"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollTo('download');
+                  }}
+                >
                   <span>{t.profCtaBtn}</span>
                   <Icon name="arrowRight" size={16} />
                 </a>
@@ -1757,10 +2092,14 @@ function App() {
                   <img
                     src={founderPhoto}
                     alt="Assane SOW – Fondateur & Directeur Général de Wallu, application de services au Sénégal"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="founder-img-badge">
-                  <div className="badge-num">🇸🇳</div>
+                  <div className="badge-num">
+                    <Icon name="flag" size={18} style={{ color: 'var(--yellow)' }} />
+                  </div>
                   <div className="badge-label">Fièrement sénégalais</div>
                 </div>
               </motion.div>
@@ -1773,7 +2112,10 @@ function App() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.1 }}
               >
-                <div className="section-badge" style={{ marginBottom: '24px' }}>✦ {t.founderBadge}</div>
+                <div className="section-badge" style={{ marginBottom: '24px', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                  <Icon name="sparkles" size={13} />
+                  {t.founderBadge}
+                </div>
 
                 <blockquote className="founder-quote">
                   "{t.founderQuote}"
@@ -1830,7 +2172,9 @@ function App() {
               {/* Trust Score Header Banner */}
               <div className="testi-trust-bar">
                 <div className="testi-trust-stat">
-                  <span className="testi-trust-val">4.8 ★</span>
+                  <span className="testi-trust-val" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '4px' }}>
+                    4.8 <Icon name="star" size={16} style={{ color: 'var(--yellow)' }} />
+                  </span>
                   <span className="testi-trust-lbl">Note moyenne Store</span>
                 </div>
                 <div className="testi-trust-divider" />
@@ -1845,8 +2189,8 @@ function App() {
                 </div>
                 <div className="testi-trust-divider" />
                 <div className="testi-trust-stat">
-                  <span className="testi-trust-val">0 FCFA</span>
-                  <span className="testi-trust-lbl">Commission prélevée</span>
+                  <span className="testi-trust-val">30+</span>
+                  <span className="testi-trust-lbl">{lang === 'fr' ? 'Métiers vérifiés' : 'Verified professions'}</span>
                 </div>
               </div>
             </div>
@@ -1956,7 +2300,9 @@ function App() {
                   <div className="num-lbl">{t.ctaStatsActive}</div>
                 </div>
                 <div className="cta-num-item">
-                  <div className="num-val">4.8 ★</div>
+                  <div className="num-val" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '4px' }}>
+                    4.8 <Icon name="star" size={20} style={{ color: 'var(--yellow)' }} />
+                  </div>
                   <div className="num-lbl">{t.ctaStatsRating}</div>
                 </div>
                 <div className="cta-num-item">
@@ -1964,8 +2310,8 @@ function App() {
                   <div className="num-lbl">{t.ctaStatsCities}</div>
                 </div>
                 <div className="cta-num-item">
-                  <div className="num-val">0 FCFA</div>
-                  <div className="num-lbl">{t.ctaStatsFree}</div>
+                  <div className="num-val">30+</div>
+                  <div className="num-lbl">{lang === 'fr' ? 'Métiers qualifiés' : 'Skilled trades'}</div>
                 </div>
               </div>
 
@@ -2014,7 +2360,12 @@ function App() {
           <div className="footer-grid">
             {/* Brand */}
             <div className="footer-brand">
-              <div className="footer-logo">
+              <div 
+                className="footer-logo"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                style={{ cursor: 'pointer' }}
+                title="Wallu - Retour en haut"
+              >
                 <img src={walluIcon} alt="Wallu" />
                 Wallu
               </div>
@@ -2085,24 +2436,45 @@ function App() {
               </a>
             </div>
             <p className="footer-bottom-text">
-              {t.footerRights} • Développé par <a href="https://www.linkedin.com/in/momar-diop/" target="_blank" rel="noopener noreferrer me" className="footer-credit-link">Momar DIOP</a> • Fondé par <strong className="footer-credit-name">Assane SOW</strong>
+              {t.footerRights}
+            </p>
+            <p className="footer-credits-text">
+              {lang === 'fr' ? 'Développé par' : 'Developed by'}{' '}
+              <a href="https://www.linkedin.com/in/momar-diop/" target="_blank" rel="noopener noreferrer me" className="footer-credit-link">Momar DIOP</a>
+              {' • '}
+              {lang === 'fr' ? 'Fondé par' : 'Founded by'}{' '}
+              <strong className="footer-credit-name">Assane SOW</strong>
             </p>
           </div>
         </div>
       </footer>
 
-      {/* ── BACK TO TOP ────────────────────────────────────── */}
-      {scrolled && (
-        <button 
-          type="button" 
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
-          className="floating-back-top-btn"
-          aria-label="Retour en haut"
-          title="Retour en haut de page"
+      {/* ── FLOATING ACTIONS (WHATSAPP + BACK TO TOP) ───────── */}
+      <div className="floating-actions-container">
+        <a
+          href="https://wa.me/221774682474?text=Bonjour%20Wallu%2C%20j%27ai%20besoin%20d%27une%20information%20sur%20l%27application."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="floating-whatsapp-btn"
+          aria-label="Assistance WhatsApp directe"
+          title="Contacter le support Wallu sur WhatsApp"
         >
-          <Icon name="chevronLeft" size={18} style={{ transform: 'rotate(90deg)' }} />
-        </button>
-      )}
+          <Icon name="messageSquare" size={18} />
+          <span className="floating-whatsapp-label">{lang === 'fr' ? 'Besoin d\'aide ?' : 'Need help?'}</span>
+        </a>
+
+        {scrolled && (
+          <button 
+            type="button" 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
+            className="floating-back-top-btn"
+            aria-label="Retour en haut"
+            title="Retour en haut de page"
+          >
+            <Icon name="chevronLeft" size={18} style={{ transform: 'rotate(90deg)' }} />
+          </button>
+        )}
+      </div>
 
       {/* ── LEGAL MODAL ─────────────────────────────────────── */}
       <AnimatePresence>
@@ -2132,7 +2504,7 @@ function App() {
                   className="legal-modal-close"
                   aria-label="Fermer"
                 >
-                  ✕
+                  <Icon name="x" size={16} />
                 </button>
               </div>
 

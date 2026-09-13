@@ -1,0 +1,25 @@
+{
+  "name": "Wallu – L'application de services N°1 au Sénégal",
+  "short_name": "Wallu",
+  "description": "Prestataires vérifiés, livraison, courses Ndouguilma et marketplace locale au Sénégal.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#083A64",
+  "theme_color": "#083A64",
+  "orientation": "portrait-primary",
+  "lang": "fr-SN",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
