@@ -210,6 +210,8 @@ const TRANSLATIONS = {
     founderP2: 'Notre vision est de construire un écosystème de confiance où les Sénégalais, qu\'ils soient à Dakar, Touba, Ziguinchor ou Saint-Louis, peuvent accéder à des services de qualité, vendre leurs produits et simplifier leur quotidien grâce à la technologie. Wallu, c\'est la communauté sénégalaise au service de ses membres.',
     founderP3: 'Aujourd\'hui, Wallu est disponible sur l\'App Store et le Google Play Store. Notre mission reste la même : rapprocher les Sénégalais, soutenir l\'économie locale et construire une application dont tout un peuple peut être fier.',
     founderRole: 'Fondateur & Directeur Général, Wallu',
+    founderBadgeNum: '100%',
+    founderBadgeLabel: 'Fièrement sénégalais',
     testiBadge: 'Avis Utilisateurs',
     testiHeading: 'Ce que les Sénégalais disent de Wallu',
     testiSub: 'Des milliers d\'utilisateurs simplifient leur quotidien avec Wallu chaque jour.',
@@ -371,6 +373,8 @@ const TRANSLATIONS = {
     founderP2: 'Our vision is to build an ecosystem of trust where the Senegalese, whether they are in Dakar, Touba, Ziguinchor, or Saint-Louis, can access quality services, sell their products, and simplify their daily lives through technology. Wallu is the Senegalese community serving its members.',
     founderP3: 'Today, Wallu is available on the App Store and Google Play Store. Our mission remains the same: bringing the Senegalese closer, supporting the local economy, and building an app an entire nation can be proud of.',
     founderRole: 'Founder & CEO, Wallu',
+    founderBadgeNum: '100%',
+    founderBadgeLabel: 'Proudly Senegalese',
     testiBadge: 'User Reviews',
     testiHeading: 'What the Senegalese are saying about Wallu',
     testiSub: 'Thousands of users simplify their daily lives with Wallu every day.',
@@ -2098,9 +2102,15 @@ function App() {
                 </div>
                 <div className="founder-img-badge">
                   <div className="badge-num">
-                    <Icon name="flag" size={18} style={{ color: 'var(--yellow)' }} />
+                    <span>{t.founderBadgeNum}</span>
+                    <svg width="22" height="15" viewBox="0 0 900 600" style={{ borderRadius: '3px', boxShadow: '0 1px 3px rgba(0,0,0,0.2)', display: 'inline-block', verticalAlign: 'middle', marginLeft: '6px' }} aria-label="Drapeau du Sénégal">
+                      <rect width="300" height="600" fill="#00853F" />
+                      <rect x="300" width="300" height="600" fill="#FDEF42" />
+                      <rect x="600" width="300" height="600" fill="#E31B23" />
+                      <polygon points="450,210 473,282 549,282 487,327 511,399 450,354 389,399 413,327 351,282 427,282" fill="#00853F" />
+                    </svg>
                   </div>
-                  <div className="badge-label">Fièrement sénégalais</div>
+                  <div className="badge-label">{t.founderBadgeLabel}</div>
                 </div>
               </motion.div>
 

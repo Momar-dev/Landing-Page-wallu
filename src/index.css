@@ -2188,12 +2188,27 @@ header {
   position: absolute; bottom: -20px; right: -20px;
   background: var(--yellow);
   border-radius: 20px;
-  padding: 16px 20px;
+  padding: 14px 20px;
   box-shadow: var(--shadow-yellow);
   text-align: center;
 }
-.founder-img-badge .badge-num { font-size: 1.8rem; font-weight: 800; color: var(--blue); line-height: 1; }
-.founder-img-badge .badge-label { font-size: 0.75rem; font-weight: 600; color: var(--blue-mid); }
+.founder-img-badge .badge-num { 
+  font-size: 1.85rem; 
+  font-weight: 800; 
+  color: var(--blue); 
+  line-height: 1; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+.founder-img-badge .badge-label { 
+  font-size: 0.78rem; 
+  font-weight: 700; 
+  color: var(--blue); 
+  letter-spacing: 0.02em;
+}
 
 .founder-content { position: relative; }
 .founder-quote {
