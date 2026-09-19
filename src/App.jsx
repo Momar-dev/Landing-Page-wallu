@@ -19,6 +19,7 @@ const Icon = ({ name, size = 24, className, style }) => {
     chevronRight: <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />,
     arrowRight: <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />,
     plus: <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />,
+    book: <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />,
     globe: <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />,
     map: <><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></>,
     phone: <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-2.896-1.595-5.22-3.919-6.815-6.815l1.293-.97c.362-.271.527-.733.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />,
@@ -85,7 +86,7 @@ const TRANSLATIONS = {
     heroTitle1: 'Tout ce dont vous ',
     heroTitle2: 'avez besoin,',
     heroTitle3: ' à portée de main',
-    heroSub: 'Wallu connecte chaque Sénégalais à des artisans vérifiés et notés, des coursiers de confiance (Ndouguilma), des livreurs et des commerçants. Une plateforme accessible et transparente avec une forte demande de clients.',
+    heroSub: 'Wallu connecte chaque Sénégalais à des artisans vérifiés et notés, des professeurs & répétiteurs, des coursiers de confiance (Ndouguilma), des livreurs et des commerçants. Une plateforme accessible et transparente avec une forte demande de clients.',
     statProviders: 'Prestataires',
     statProfessions: 'Métiers',
     statCities: 'Villes couvertes',
@@ -128,7 +129,7 @@ const TRANSLATIONS = {
         badge: 'Services à Domicile',
         stat: 'Profils notés 4.8/5',
         title: 'Aide à la personne & Vie de famille',
-        desc: 'Ménage régulier, repassage, nounous de confiance et gardes d\'enfants. Des prestataires bienveillants évalués par la communauté.',
+        desc: 'Ménage régulier, repassage, répétiteurs scolaires, professeurs particuliers, nounous de confiance et gardes d\'enfants. Des prestataires bienveillants évalués par la communauté.',
         highlights: ['Avis clients certifiés', 'Disponibilité flexible'],
         color: '#083A64',
         accentColor: '#4ADE80',
@@ -174,8 +175,8 @@ const TRANSLATIONS = {
     partnerBadge: 'Réseau Partenaires',
     partnerHeading: 'Rejoignez l\'écosystème Wallu & développez votre activité',
     partnerSub: 'Une plateforme accessible et transparente avec une forte demande de clients pour chaque artisan, coursier et commerçant du Sénégal.',
-    partner1Title: 'Artisans & Prestataires',
-    partner1Desc: 'Vous avez un savoir-faire ? Rejoignez Wallu pour répondre à une forte demande de clients près de chez vous et augmenter vos revenus sur une plateforme accessible et transparente.',
+    partner1Title: 'Artisans, Professeurs & Prestataires',
+    partner1Desc: 'Vous avez un savoir-faire, ou vous êtes enseignant / répétiteur ? Rejoignez Wallu pour répondre à une forte demande de clients près de chez vous et augmenter vos revenus sur une plateforme accessible et transparente.',
     partner1Btn: 'Devenir prestataire',
     partner1Tags: ['Forte demande clients', 'Paiement direct', 'Modèle transparent'],
     partner2Title: 'Livreurs & Coursiers',
@@ -248,7 +249,7 @@ const TRANSLATIONS = {
     heroTitle1: 'Everything you ',
     heroTitle2: 'need,',
     heroTitle3: ' at your fingertips',
-    heroSub: 'Wallu connects every Senegalese to verified and rated artisans, trusted couriers (Ndouguilma), delivery drivers, and local merchants. An accessible and transparent platform with high customer demand.',
+    heroSub: 'Wallu connects every Senegalese to verified and rated artisans, home teachers & tutors, trusted couriers (Ndouguilma), delivery drivers, and local merchants. An accessible and transparent platform with high customer demand.',
     statProviders: 'Providers',
     statProfessions: 'Professions',
     statCities: 'Cities covered',
@@ -291,7 +292,7 @@ const TRANSLATIONS = {
         badge: 'Home Services',
         stat: '4.8/5 Rated Profiles',
         title: 'Personal Assistance & Family Life',
-        desc: 'Regular housekeeping, ironing, trusted nannies, and babysitters. Caring service providers rated by the community.',
+        desc: 'Regular housekeeping, ironing, academic tutors, private teachers, trusted nannies, and babysitters. Caring service providers rated by the community.',
         highlights: ['Certified user reviews', 'Flexible schedule'],
         color: '#083A64',
         accentColor: '#4ADE80',
@@ -337,8 +338,8 @@ const TRANSLATIONS = {
     partnerBadge: 'Partner Network',
     partnerHeading: 'Join the Wallu ecosystem & grow your business',
     partnerSub: 'An accessible and transparent platform with high customer demand for every artisan, driver, and merchant in Senegal.',
-    partner1Title: 'Artisans & Providers',
-    partner1Desc: 'Do you have a skill? Join Wallu to meet high customer demand near you and grow your business on an accessible and transparent platform.',
+    partner1Title: 'Artisans, Teachers & Providers',
+    partner1Desc: 'Do you have a craft or teach courses? Join Wallu to meet high customer demand near you and grow your business on an accessible and transparent platform.',
     partner1Btn: 'Become a provider',
     partner1Tags: ['High customer demand', 'Direct payment', 'Transparent model'],
     partner2Title: 'Delivery Partners & Couriers',
@@ -405,6 +406,7 @@ const DATA = {
     profCategories: [
       { id: 'all', label: 'Tous', icon: 'sparkles' },
       { id: 'habitat', label: 'Habitat & Bricolage', icon: 'wrench' },
+      { id: 'education', label: 'Éducation & Cours', icon: 'book' },
       { id: 'personne', label: 'Services à Domicile', icon: 'users' },
       { id: 'mobilite', label: 'Transport & Auto', icon: 'car' },
       { id: 'sante', label: 'Santé & Bien-être', icon: 'heart' },
@@ -424,6 +426,13 @@ const DATA = {
       { name: 'Tapissier / Rembourreur', icon: 'scissors', cat: 'habitat', tag: 'Salons & Canapés' },
       { name: 'Jardinier', icon: 'sparkles', cat: 'habitat', tag: 'Espaces verts' },
       { name: 'Loueur de matériel', icon: 'package', cat: 'habitat', tag: 'Outillage & BTP' },
+      // Éducation, Enseignement & Soutien scolaire
+      { name: 'Professeur à domicile', icon: 'book', cat: 'education', tag: 'Maths, PC, SVT' },
+      { name: 'Répétiteur scolaire', icon: 'book', cat: 'education', tag: 'Primaire & Collège' },
+      { name: 'Professeur de langues', icon: 'book', cat: 'education', tag: 'Anglais, Français, Arabe' },
+      { name: 'Préparateur examens', icon: 'book', cat: 'education', tag: 'BFEM & Baccalauréat' },
+      { name: 'Enseignant coranique', icon: 'book', cat: 'education', tag: 'Daara & Tajweed' },
+      { name: 'Formateur informatique', icon: 'zap', cat: 'education', tag: 'Bureautique & Digital' },
       // Service à la personne
       { name: 'Femme de ménage', icon: 'sparkles', cat: 'personne', tag: 'Entretien maison' },
       { name: 'Homme de ménage', icon: 'sparkles', cat: 'personne', tag: 'Nettoyage pro' },
@@ -457,9 +466,9 @@ const DATA = {
         icon: 'shopping',
         label: 'Ndouguilma (Courses marché)',
         title: 'Vos courses au marché livrées sans bouger',
-        desc: 'Confiez vos commissions aux marchés sénégalais à un coursier de confiance. Légumes frais à Kermel ou Castors, poisson thiof à Soumbédioune, viande fraîche, pharmacie de garde ou retraits Wave : tout est acheté avec soin et livré chez vous en 45 minutes chrono.',
+        desc: 'Confiez vos commissions aux marchés sénégalais à un coursier de confiance. Légumes frais à Sandaga ou Castors, poisson thiof à Soumbédioune, viande fraîche, épicerie ou retraits Wave : tout est acheté avec soin et livré chez vous en 45 minutes chrono.',
         features: [
-          'Marchés locaux en direct : Marché Kermel, Castors, Sandaga, Tilène, Soumbédioune et commerces de proximité.',
+          'Marchés locaux en direct : Marché Sandaga, Castors, Tilène, HLM, Soumbédioune et commerces de proximité.',
           'Confiance absolue : Le NIN (pièce d\'identité) est obligatoire et certifié pour tous nos coursiers.',
           'Livraison express en 45 min : Gagnez un temps précieux sans affronter la chaleur ni les embouteillages.',
           'Paiement et retraits flexibles : Wave, Orange Money ou Espèces à la livraison.',
@@ -469,13 +478,13 @@ const DATA = {
       {
         id: 'prestataires',
         icon: 'users',
-        label: 'Prestataires (30+ métiers)',
+        label: 'Prestataires (35+ métiers)',
         title: 'Des artisans vérifiés et notés',
-        desc: 'Besoin d\'un plombier, électricien, menuisier, frigoriste ou d\'une nounou ? Accédez à plus de 30 métiers différents. Des artisans vérifiés et notés par la communauté. Comparez les profils, vérifiez les avis, et contactez-les directement.',
+        desc: 'Besoin d\'un plombier, électricien, professeur à domicile, frigoriste ou d\'une nounou ? Accédez à plus de 35 métiers différents. Des artisans et enseignants vérifiés et notés par la communauté. Comparez les profils, vérifiez les avis, et contactez-les directement.',
         features: [
           'Artisans vérifiés et notés : Des professionnels qualifiés avec identités certifiées (NIN) et avis clients réels.',
           'Plateforme accessible & Forte demande : Flux constant de demandes, contact direct sans intermédiaire via Appel ou WhatsApp.',
-          'Accédez à plus de 30 métiers : Plomberie, électricité, froid & climatisation, maçonnerie, menuiserie, carrelage...',
+          'Accédez à plus de 35 métiers : Éducation, plomberie, électricité, froid & climatisation, maçonnerie, menuiserie, carrelage...',
           'Hyper-Localisation : Trouvez les meilleurs artisans juste à côté de chez vous en quelques secondes.',
         ],
         color: '#083A64'
@@ -537,7 +546,7 @@ const DATA = {
         verified: true,
         rating: 5,
         date: 'Il y a 2 jours',
-        text: 'Le service Ndouguilma m\'a sauvée ! Avec mon travail à la banque, je n\'ai plus le temps d\'aller au marché Kermel. Le coursier m\'a livré des légumes ultra-frais en 45 min. Dieureudieuf Wallu !'
+        text: 'Le service Ndouguilma m\'a sauvée ! Avec mon travail à la banque, je n\'ai plus le temps d\'aller au marché Sandaga. Le coursier m\'a livré des légumes ultra-frais en 45 min. Dieureudieuf Wallu !'
       },
       {
         id: '2',
@@ -593,17 +602,17 @@ const DATA = {
         name: 'Awa Sy',
         role: 'Retraitée',
         city: 'Saint-Louis (Sor)',
-        service: 'Ndouguilma • Pharmacie à domicile',
+        service: 'Ndouguilma • Commissions marché',
         verified: true,
         rating: 5,
         date: 'Il y a 3 semaines',
-        text: 'Mon fils m\'a installée Wallu sur mon téléphone. Je commande mes ordonnances à la pharmacie sans devoir marcher ou affronter la chaleur. Les jeunes coursiers sont d\'une politesse exemplaire.'
+        text: 'Mon fils m\'a installé Wallu sur mon téléphone. Je commande mes commissions du marché sans devoir marcher ou affronter la chaleur. Les jeunes coursiers sont d\'une politesse exemplaire et livrent tout frais.'
       }
     ],
     faqs: [
       { q: 'Qu\'est-ce que Wallu ?', a: 'Wallu est une super-application sénégalaise qui vous connecte directement avec des artisans vérifiés et notés, des coursiers pour vos commissions (Ndouguilma), des livreurs (Yobbuul ma) et une marketplace locale (Wallu Vente). Une plateforme accessible et transparente avec une forte demande de clients.' },
       { q: 'L\'application est-elle gratuite ?', a: 'L\'application Wallu est gratuite à télécharger sur l\'App Store et Google Play. Pour les artisans et commerçants, Wallu offre une plateforme moderne, accessible et transparente avec une forte demande de clients, garantissant un modèle équitable sans frais cachés.' },
-      { q: 'Comment fonctionne Ndouguilma ?', a: 'Vous ouvrez l\'app, décrivez votre commission (marché Kermel, Castors, Sandaga, pharmacie de garde, retraits Wave, etc.), un coursier vérifié accepte la demande, effectue les achats avec soin et vous livre en 45 minutes.' },
+      { q: 'Comment fonctionne Ndouguilma ?', a: 'Vous ouvrez l\'app, décrivez votre commission (marché Sandaga, Castors, Tilène, épicerie, retraits Wave, etc.), un coursier vérifié accepte la demande, effectue les achats avec soin et vous livre en 45 minutes.' },
       { q: 'Les profils sont-ils vraiment vérifiés ?', a: 'Oui. La pièce d\'identité nationale (NIN) est exigée et vérifiée avec rigueur. En plus, le système d\'avis et d\'évaluations certifiés par les clients garantit une totale confiance.' },
       { q: 'Comment fonctionne Wallu AI ?', a: 'C\'est un assistant intelligent intégré. Vous pouvez lui écrire directement dans l\'application pour lui demander de trouver un artisan, un coursier ou un produit disponible.' },
       { q: 'Wallu est disponible dans quelle ville ?', a: 'De Dakar à Saint-Louis, de Thiès à Touba et Ziguinchor, Wallu couvre tout le territoire sénégalais avec plus de 70 villes actives.' },
@@ -613,6 +622,7 @@ const DATA = {
     profCategories: [
       { id: 'all', label: 'All', icon: 'sparkles' },
       { id: 'habitat', label: 'Home & DIY', icon: 'wrench' },
+      { id: 'education', label: 'Education & Tutoring', icon: 'book' },
       { id: 'personne', label: 'Home Services', icon: 'users' },
       { id: 'mobilite', label: 'Transport & Auto', icon: 'car' },
       { id: 'sante', label: 'Health & Wellness', icon: 'heart' },
@@ -632,6 +642,13 @@ const DATA = {
       { name: 'Upholsterer', icon: 'scissors', cat: 'habitat', tag: 'Sofas & Furniture' },
       { name: 'Gardener', icon: 'sparkles', cat: 'habitat', tag: 'Green Spaces' },
       { name: 'Tool Rental', icon: 'package', cat: 'habitat', tag: 'Tools & Construction' },
+      // Education & Tutoring
+      { name: 'Home Tutor / Teacher', icon: 'book', cat: 'education', tag: 'Math & Sciences' },
+      { name: 'Academic Support Tutor', icon: 'book', cat: 'education', tag: 'Primary & Secondary' },
+      { name: 'Language Teacher', icon: 'book', cat: 'education', tag: 'English, French, Arabic' },
+      { name: 'Exam Prep Coach', icon: 'book', cat: 'education', tag: 'BFEM & Baccalaureate' },
+      { name: 'Quranic Teacher', icon: 'book', cat: 'education', tag: 'Daara & Tajweed' },
+      { name: 'Computer & Digital Tutor', icon: 'zap', cat: 'education', tag: 'IT & Digital Skills' },
       // Personal Services
       { name: 'Housekeeper (F)', icon: 'sparkles', cat: 'personne', tag: 'Home Maintenance' },
       { name: 'Housekeeper (M)', icon: 'sparkles', cat: 'personne', tag: 'Pro Cleaning' },
@@ -665,9 +682,9 @@ const DATA = {
         icon: 'shopping',
         label: 'Ndouguilma (Market Errands)',
         title: 'Your market shopping delivered to your door',
-        desc: 'Entrust your shopping in Senegalese markets to a trusted courier. Fresh produce at Kermel or Castors, fresh fish at Soumbédioune, meat, urgent pharmacy runs or Wave cash withdrawals: everything is picked carefully and delivered in 45 minutes.',
+        desc: 'Entrust your shopping in Senegalese markets to a trusted courier. Fresh produce at Sandaga or Castors, fresh fish at Soumbédioune, meat, daily essentials or Wave cash withdrawals: everything is picked carefully and delivered in 45 minutes.',
         features: [
-          'Direct local markets: Kermel, Castors, Sandaga, Tilène, Soumbédioune, and neighborhood shops.',
+          'Direct local markets: Sandaga, Castors, Tilène, HLM, Soumbédioune, and neighborhood shops.',
           'Total trust: National ID (NIN) is mandatory and verified for all courier partners.',
           '45-minute express delivery: Save valuable time without facing the heat and traffic.',
           'Flexible payment: Wave, Orange Money or Cash upon delivery.',
@@ -677,13 +694,13 @@ const DATA = {
       {
         id: 'prestataires',
         icon: 'users',
-        label: 'Providers (30+ trades)',
+        label: 'Providers (35+ trades)',
         title: 'Verified and rated artisans',
-        desc: 'Need a plumber, electrician, carpenter, AC technician or a nanny? Access over 30 different trades. Compare profiles, check reviews, and contact them directly via call or WhatsApp.',
+        desc: 'Need a plumber, electrician, home tutor, AC technician or a nanny? Access over 35 different trades. Compare profiles, check reviews, and contact them directly via call or WhatsApp.',
         features: [
           'Verified and rated artisans: Qualified professionals with verified National IDs (NIN) and real client reviews.',
           'Accessible platform & High demand: Steady flow of requests, direct contact without middlemen.',
-          'Over 30 trades: Plumbing, electrical, air conditioning, masonry, carpentry, tiling and more.',
+          'Over 35 trades: Education & Tutoring, plumbing, electrical, air conditioning, masonry, carpentry and more.',
           'Hyper-Localization: Find the best nearby artisans in seconds.',
         ],
         color: '#083A64'
@@ -745,7 +762,7 @@ const DATA = {
         verified: true,
         rating: 5,
         date: '2 days ago',
-        text: 'The Ndouguilma service saved me! With my bank job, I no longer have time to go to Kermel market. The courier delivered ultra-fresh vegetables in 45 minutes. Dieureudieuf Wallu!'
+        text: 'The Ndouguilma service saved me! With my bank job, I no longer have time to go to Sandaga market. The courier delivered ultra-fresh vegetables in 45 minutes. Dieureudieuf Wallu!'
       },
       {
         id: '2',
@@ -801,17 +818,17 @@ const DATA = {
         name: 'Awa Sy',
         role: 'Retiree',
         city: 'Saint-Louis (Sor)',
-        service: 'Ndouguilma • Home Pharmacy',
+        service: 'Ndouguilma • Market Errands',
         verified: true,
         rating: 5,
         date: '3 weeks ago',
-        text: 'My son installed Wallu on my phone. I order prescriptions from the pharmacy without having to walk in the heat. The young couriers are exceptionally polite.'
+        text: 'My son installed Wallu on my phone. I order my market errands without having to walk in the heat. The young couriers are exceptionally polite and deliver everything fresh.'
       }
     ],
     faqs: [
       { q: 'What is Wallu?', a: 'Wallu is a Senegalese super-app that connects you directly with verified and rated artisans, market couriers (Ndouguilma), delivery drivers (Yobbuul ma) and a local marketplace. An accessible and transparent platform with high customer demand.' },
       { q: 'Is the app free?', a: 'Wallu is free to download on the App Store and Google Play. For artisans and merchants, Wallu provides an accessible and transparent platform with high customer demand and fair terms.' },
-      { q: 'How does Ndouguilma work?', a: 'You open the app, describe your errand (Kermel, Castors, Sandaga, pharmacy, Wave, etc.), a NIN-verified courier accepts, picks up the items, and delivers to you in 45 minutes.' },
+      { q: 'How does Ndouguilma work?', a: 'You open the app, describe your errand (Sandaga, Castors, Tilène, supermarket, local shops, Wave, etc.), a NIN-verified courier accepts, picks up the items, and delivers to you in 45 minutes.' },
       { q: 'Are the profiles truly verified?', a: 'Yes. National ID (NIN) verification is strictly enforced. In addition, ratings and verified customer reviews ensure absolute trust.' },
       { q: 'How does Wallu AI work?', a: 'It\'s an integrated smart assistant. You can text it directly in the app to find an artisan, courier, or local item instantly.' },
       { q: 'In which cities is Wallu available?', a: 'Everywhere in Senegal! Dakar, Thiès, Saint-Louis, Touba, Ziguinchor, Kaolack, Mbour and all other towns.' },
@@ -1152,8 +1169,8 @@ function App() {
                     <div className="nd-card-body">
                       <p className="nd-desc">
                         {lang === 'fr' 
-                          ? 'Courses aux marchés Kermel, Castors & livraisons express à domicile' 
-                          : 'Market errands from Kermel, Castors & doorstep express delivery'}
+                          ? 'Courses aux marchés Sandaga, Castors & livraisons express à domicile' 
+                          : 'Market errands from Sandaga, Castors & doorstep express delivery'}
                       </p>
                     </div>
                   </a>
@@ -1165,7 +1182,7 @@ function App() {
                     <div className="stat-label">{t.statProviders}</div>
                   </div>
                   <div className="stat-item">
-                    <div className="stat-num">30+</div>
+                    <div className="stat-num">35+</div>
                     <div className="stat-label">{t.statProfessions}</div>
                   </div>
                   <div className="stat-item">
@@ -1198,7 +1215,7 @@ function App() {
                     src={appInterfaceImg} 
                     alt="Application mobile Wallu Sénégal" 
                     className="hero-mockup-img" 
-                    fetchPriority="high"
+                    fetchpriority="high"
                     decoding="async"
                   />
                 </div>
@@ -1250,8 +1267,8 @@ function App() {
               </h2>
               <p>
                 {lang === 'fr' 
-                  ? 'Kermel, Castors, Soumbédioune ou pharmacie de garde : confiez votre liste à un coursier certifié NIN, paiement sécurisé et livraison directe chez vous en 45 minutes.'
-                  : 'Kermel, Castors, Soumbédioune or on-duty pharmacy: entrust your errand list to a NIN-certified courier with guaranteed 45-minute delivery.'}
+                  ? 'Sandaga, Castors, Soumbédioune ou commerces locaux : confiez votre liste à un coursier certifié NIN, paiement sécurisé et livraison directe chez vous en 45 minutes.'
+                  : 'Sandaga, Castors, Soumbédioune or local neighborhood shops: entrust your errand list to a NIN-certified courier with guaranteed 45-minute delivery.'}
               </p>
             </div>
 
@@ -1264,8 +1281,8 @@ function App() {
                     <div className="nd-step-title">{lang === 'fr' ? 'Rédigez votre liste' : 'Write your errand list'}</div>
                     <div className="nd-step-desc">
                       {lang === 'fr' 
-                        ? 'Indiquez vos besoins (légumes, poissons frais, viandes, ordonnances...) et le marché souhaité.'
-                        : 'List fresh vegetables, daily fish, meats or urgent pharmacy items with your market of choice.'}
+                        ? 'Indiquez vos besoins (légumes, poissons frais, viandes, épicerie...) et le marché souhaité.'
+                        : 'List fresh vegetables, daily fish, meats or groceries with your market of choice.'}
                     </div>
                   </div>
 
@@ -1308,11 +1325,11 @@ function App() {
                   </div>
                   <div className="nd-markets-chips">
                     {[
-                      { id: 'soumbedioune', icon: 'fish', label: 'Soumbédioune (Poisson frais)' },
-                      { id: 'castors', icon: 'leaf', label: 'Castors (Légumes & condiments)' },
-                      { id: 'kermel', icon: 'shopping', label: 'Kermel (Épicerie & fruits)' },
-                      { id: 'sandaga', icon: 'tag', label: 'Sandaga & Tilène (Habillement)' },
-                      { id: 'pharmacie', icon: 'cross', label: 'Pharmacie de garde 24/7' },
+                      { id: 'soumbedioune', icon: 'fish', label: lang === 'fr' ? 'Soumbédioune (Poisson frais)' : 'Soumbédioune (Fresh fish)' },
+                      { id: 'castors', icon: 'leaf', label: lang === 'fr' ? 'Castors (Légumes & condiments)' : 'Castors (Fresh veggies & spices)' },
+                      { id: 'sandaga', icon: 'shopping', label: lang === 'fr' ? 'Sandaga (Épicerie & vivres)' : 'Sandaga (Groceries & food items)' },
+                      { id: 'tilene', icon: 'tag', label: lang === 'fr' ? 'Tilène & HLM (Textile & maison)' : 'Tilène & HLM (Textiles & home)' },
+                      { id: 'grand-yoff', icon: 'shopping', label: lang === 'fr' ? 'Grand Yoff (Vivres & condiments)' : 'Grand Yoff (Provisions & spices)' },
                     ].map(m => (
                       <span 
                         key={m.id}
@@ -1377,7 +1394,7 @@ function App() {
                     <div className="nd-check-item">
                       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                         <div className="nd-check-icon pending"><Icon name="clock" size={13} /></div>
-                        <span>Pharmacie de garde (Ordonnance express)</span>
+                        <span>Épicerie & vivres frais (Marché Sandaga)</span>
                       </div>
                       <span style={{ color: 'var(--yellow)', fontWeight: 700, fontSize: '0.78rem' }}>Achat en cours</span>
                     </div>
@@ -1727,11 +1744,11 @@ function App() {
                           </div>
 
                           <div className="bento-actions">
-                            <a href="tel:+221774682474" className="bento-btn bento-btn-call">
+                            <a href="tel:+221783838855" className="bento-btn bento-btn-call">
                               <Icon name="phone" size={15} /> {lang === 'fr' ? 'Appeler directement' : 'Call directly'}
                             </a>
                             <a 
-                              href="https://wa.me/221774682474?text=Bonjour%20Wallu%2C%20je%20recherche%20un%20prestataire" 
+                              href="https://wa.me/221783838855?text=Bonjour%20Wallu%2C%20je%20recherche%20un%20prestataire" 
                               target="_blank" 
                               rel="noopener noreferrer" 
                               className="bento-btn bento-btn-wa"
@@ -1822,7 +1839,7 @@ function App() {
                               <div className="market-item-icon-box">
                                 <Icon name="shield" size={15} style={{ color: '#38bdf8' }} />
                               </div>
-                              <span className="market-item-name">Pharmacie de garde (Ordonnance express)</span>
+                              <span className="market-item-name">Légumes & condiments frais - Marché Castors</span>
                               <span className="market-item-check"><Icon name="check" size={14} /></span>
                             </div>
                           </div>
@@ -1934,7 +1951,7 @@ function App() {
             <div className="section-header fade-up">
               <div className="section-badge badge-blue">
                 <Icon name="tools" size={15} />
-                <span>{t.profBadge} • {lang === 'fr' ? '30+ Métiers' : '30+ Professions'}</span>
+                <span>{t.profBadge} • {lang === 'fr' ? '35+ Métiers' : '35+ Professions'}</span>
               </div>
               <h2>
                 {lang === 'fr' ? (
@@ -2199,7 +2216,7 @@ function App() {
                 </div>
                 <div className="testi-trust-divider" />
                 <div className="testi-trust-stat">
-                  <span className="testi-trust-val">30+</span>
+                  <span className="testi-trust-val">35+</span>
                   <span className="testi-trust-lbl">{lang === 'fr' ? 'Métiers vérifiés' : 'Verified professions'}</span>
                 </div>
               </div>
@@ -2320,7 +2337,7 @@ function App() {
                   <div className="num-lbl">{t.ctaStatsCities}</div>
                 </div>
                 <div className="cta-num-item">
-                  <div className="num-val">30+</div>
+                  <div className="num-val">35+</div>
                   <div className="num-lbl">{lang === 'fr' ? 'Métiers qualifiés' : 'Skilled trades'}</div>
                 </div>
               </div>
@@ -2344,7 +2361,7 @@ function App() {
                 <h3>Assane SOW – Gestion & Partenariats</h3>
                 <p>Pour toute question commerciale ou demande de partenariat avec Wallu.</p>
                 <div className="contact-links-stack">
-                  <a href="tel:+221774682474" className="contact-link">+221 77 468 24 74</a>
+                  <a href="tel:+221783838855" className="contact-link">+221 78 383 88 55</a>
                   <a href="mailto:assane-service@wallu.sn" className="contact-link">assane-service@wallu.sn</a>
                 </div>
              </div>
@@ -2462,7 +2479,7 @@ function App() {
       {/* ── FLOATING ACTIONS (WHATSAPP + BACK TO TOP) ───────── */}
       <div className="floating-actions-container">
         <a
-          href="https://wa.me/221774682474?text=Bonjour%20Wallu%2C%20j%27ai%20besoin%20d%27une%20information%20sur%20l%27application."
+          href="https://wa.me/221783838855?text=Bonjour%20Wallu%2C%20j%27ai%20besoin%20d%27une%20information%20sur%20l%27application."
           target="_blank"
           rel="noopener noreferrer"
           className="floating-whatsapp-btn"
@@ -2524,7 +2541,7 @@ function App() {
                   <p>
                     <strong>Nom du service :</strong> Wallu (wallu.sn)<br />
                     <strong>Activité :</strong> Plateforme et application mobile de mise en relation de services locaux, livraisons et marketplace au Sénégal.<br />
-                    <strong>Fondateur & Directeur Général :</strong> Assane SOW (<a href="mailto:assane-service@wallu.sn">assane-service@wallu.sn</a> • +221 77 468 24 74)<br />
+                    <strong>Fondateur & Directeur Général :</strong> Assane SOW (<a href="mailto:assane-service@wallu.sn">assane-service@wallu.sn</a> • +221 78 383 88 55)<br />
                     <strong>Conception technique & Développement :</strong> Momar DIOP (<a href="mailto:momardiop091@gmail.com">momardiop091@gmail.com</a> • +221 77 754 20 53)<br />
                     <strong>Siège / Localisation :</strong> Dakar, République du Sénégal.
                   </p>
