@@ -1021,9 +1021,28 @@ function App() {
     };
   }, [showLegalModal]);
 
+  // Handle initial hash in URL (e.g. #download from QR code)
+  useEffect(() => {
+    if (window.location.hash) {
+      const targetId = window.location.hash.replace('#', '');
+      const timer = setTimeout(() => {
+        const el = document.getElementById(targetId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 350);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     setMenuOpen(false);
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   return (
@@ -1084,7 +1103,8 @@ function App() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               style={{
-                background: 'rgba(5,40,68,0.98)',
+                backgroundColor: '#083A64',
+                background: '#083A64',
                 borderTop: '1px solid rgba(255,255,255,0.08)',
                 overflow: 'hidden',
               }}
@@ -1098,10 +1118,9 @@ function App() {
                 <a 
                   href="#download" 
                   className="btn-nav" 
-                  style={{ textAlign: 'center' }} 
+                  style={{ textAlign: 'center', cursor: 'pointer' }} 
                   onClick={(e) => {
                     e.preventDefault();
-                    setMenuOpen(false);
                     scrollTo('download');
                   }}
                 >
@@ -1191,7 +1210,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="hero-actions">
+                <div id="telecharger" className="hero-actions" style={{ scrollMarginTop: '100px' }}>
                   <div className="store-badge-wrap">
                     <a href="https://apps.apple.com/sn/app/wallu/id6796547523?l=fr-FR" target="_blank" rel="noopener noreferrer" className="store-badge" title="Télécharger sur l'App Store (iOS)">
                       <img src={appleStoreBadge} alt="Télécharger Wallu sur App Store" />
@@ -2437,16 +2456,20 @@ function App() {
               <h4>{t.footerContactTitle}</h4>
               <ul>
                 <li className="footer-contact-item">
+                  <Icon name="phone" size={16} />
+                  <span>Assane SOW : <a href="tel:+221783838855" style={{ color: '#FFD900', fontWeight: 600 }}>+221 78 383 88 55</a></span>
+                </li>
+                <li className="footer-contact-item">
                   <Icon name="mail" size={16} />
                   <a href="mailto:assane-service@wallu.sn">assane-service@wallu.sn</a>
                 </li>
                 <li className="footer-contact-item">
-                  <Icon name="phone" size={16} />
-                  <a href="tel:+221777542053">+221 77 754 20 53</a>
-                </li>
-                <li className="footer-contact-item">
                   <Icon name="mail" size={16} />
                   <a href="mailto:support@wallu.sn">support@wallu.sn</a>
+                </li>
+                <li className="footer-contact-item" style={{ marginTop: '10px', paddingTop: '8px', borderTop: '1px solid rgba(255,255,255,0.08)', opacity: 0.85 }}>
+                  <Icon name="phone" size={14} />
+                  <span style={{ fontSize: '0.85rem' }}>Momar DIOP (Dév) : <a href="tel:+221777542053" style={{ color: 'rgba(255,255,255,0.9)' }}>+221 77 754 20 53</a></span>
                 </li>
               </ul>
             </div>
