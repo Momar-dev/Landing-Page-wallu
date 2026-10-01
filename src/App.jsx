@@ -1371,12 +1371,12 @@ function App() {
                 <div className="nd-live-card">
                   <div className="nd-live-header">
                     <div className="nd-live-title">
-                      <Icon name="shopping" size={20} style={{ color: 'var(--yellow)' }} />
-                      <span>{lang === 'fr' ? 'Course Ndouguilma en direct' : 'Live Ndouguilma Errand'}</span>
+                      <Icon name="shopping" size={20} style={{ color: 'var(--yellow)', flexShrink: 0 }} />
+                      <span>{lang === 'fr' ? 'Course en direct' : 'Live Errand'}</span>
                     </div>
                     <div className="nd-live-status-badge">
                       <span className="nd-pulse"></span>
-                      <span>{lang === 'fr' ? 'En cours • Castors' : 'In progress • Castors'}</span>
+                      <span>Castors</span>
                     </div>
                   </div>
 
