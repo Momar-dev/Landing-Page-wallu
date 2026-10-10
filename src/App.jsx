@@ -2446,7 +2446,7 @@ function App() {
               <h4>{t.footerLegalTitle}</h4>
               <ul>
                 <li><a href="/privacy.html" target="_blank" rel="noopener noreferrer">{t.footerPrivacy}</a></li>
-                <li><a href="https://docs.google.com/document/d/1KS3E0WOi-Uj1U6fDjcMuLgjnolnwYCkPQSTaLNID9VA/edit" target="_blank" rel="noopener noreferrer">{t.footerTerms}</a></li>
+                <li><a href="/terms.html" target="_blank" rel="noopener noreferrer">{t.footerTerms}</a></li>
                 <li><button type="button" onClick={() => setShowLegalModal(true)} className="footer-link-btn">{t.footerLegal}</button></li>
               </ul>
             </div>
@@ -2565,7 +2565,7 @@ function App() {
                     <strong>Nom du service :</strong> Wallu (wallu.sn)<br />
                     <strong>Activité :</strong> Plateforme et application mobile de mise en relation de services locaux, livraisons et marketplace au Sénégal.<br />
                     <strong>Fondateur & Directeur Général :</strong> Assane SOW (<a href="mailto:assane-service@wallu.sn">assane-service@wallu.sn</a> • +221 78 383 88 55)<br />
-                    <strong>Conception technique & Développement :</strong> Momar DIOP (<a href="mailto:momardiop091@gmail.com">momardiop091@gmail.com</a> • +221 77 754 20 53)<br />
+                    <strong>Conception technique & Développement :</strong> Momar DIOP (<a href="mailto:momardiop0311@gmail.com">momardiop0311@gmail.com</a> • +221 77 754 20 53)<br />
                     <strong>Siège / Localisation :</strong> Dakar, République du Sénégal.
                   </p>
                 </section>

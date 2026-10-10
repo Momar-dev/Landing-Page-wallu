@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" href="/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Politique de Confidentialité — Wallu Sénégal</title>
-    <meta name="description" content="Politique de confidentialité de l'application Wallu Sénégal." />
+    <meta name="description" content="Politique de confidentialité de l'application mobile Wallu Sénégal." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -46,24 +46,26 @@
         font-weight: 800;
         color: #062F51;
         margin-bottom: 8px;
+        line-height: 1.3;
       }
       .updated {
         color: #64748B;
         font-size: 0.95rem;
-        margin-bottom: 48px;
+        margin-bottom: 40px;
       }
       h2 {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
         font-weight: 700;
         color: #062F51;
-        margin-top: 40px;
+        margin-top: 36px;
         margin-bottom: 12px;
         padding-left: 12px;
         border-left: 4px solid #FFD900;
       }
       p, li { color: #475569; font-size: 1rem; margin-bottom: 12px; }
-      ul { padding-left: 24px; }
-      li { margin-bottom: 6px; }
+      ul { padding-left: 24px; margin-bottom: 16px; }
+      li { margin-bottom: 8px; }
+      li strong { color: #062F51; }
       a { color: #062F51; font-weight: 600; }
       .card {
         background: white;
@@ -114,13 +116,18 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        margin-top: 20px;
+        margin-top: 24px;
         background: #F1F5F9;
-        padding: 8px 14px;
+        padding: 8px 16px;
         border-radius: 30px;
         font-size: 0.9rem;
         font-weight: 600;
         color: #062F51;
+      }
+      @media (max-width: 640px) {
+        .card { padding: 28px 20px; border-radius: 16px; }
+        h1 { font-size: 1.7rem; }
+        .container { padding: 36px 16px 80px; }
       }
     </style>
   </head>
@@ -133,114 +140,109 @@
     </header>
 
     <div class="container">
-      <h1>Politique de Confidentialité</h1>
-      <p class="updated">Dernière mise à jour : 3 août 2026</p>
+      <h1>Politique de Confidentialité de Wallu</h1>
+      <p class="updated">Dernière mise à jour : 10 Octobre 2026</p>
 
       <div class="card">
-
-        <h2>1. Introduction</h2>
         <p>
-          Bienvenue sur Wallu, l'application mobile de mise en relation avec des prestataires de services au Sénégal.
-          La présente Politique de Confidentialité a pour but de vous informer sur la manière dont nous collectons, utilisons et protégeons vos données personnelles lorsque vous utilisez notre application.
+          Bienvenue sur Wallu (&laquo;&nbsp;nous&nbsp;&raquo;, &laquo;&nbsp;notre&nbsp;&raquo;, &laquo;&nbsp;nos&nbsp;&raquo;). Nous accordons une importance capitale à la protection de vos données personnelles. Cette Politique de Confidentialité explique comment nous collectons, utilisons, stockons et protégeons les informations des utilisateurs (&laquo;&nbsp;vous&nbsp;&raquo;) de l'application mobile Wallu (les clients, prestataires, livreurs, coursiers et vendeurs).
+        </p>
+        <p>
+          En utilisant l'application Wallu, vous acceptez les pratiques décrites dans cette politique.
         </p>
 
-        <h2>2. Données collectées</h2>
-        <p>Dans le cadre du fonctionnement de l'application, nous collectons les données suivantes :</p>
+        <h2>1. Les données que nous collectons</h2>
+        <p>Afin de vous fournir un service de mise en relation de qualité, nous collectons les types d'informations suivants :</p>
         <ul>
-          <li><strong>Données d'identification :</strong> nom, prénom, numéro de téléphone, adresse e-mail.</li>
-          <li><strong>Données de localisation :</strong> votre position géographique approximative (ville), pour vous proposer des prestataires proches.</li>
-          <li><strong>Photos et médias :</strong> photos de profil, photos de produits ou de documents (pièce d'identité, photo selfie), utilisées pour la vérification des prestataires.</li>
-          <li><strong>Données vocales :</strong> enregistrements audio ponctuels pour la fonctionnalité de transcription vocale (Wallu AI). Ces enregistrements ne sont pas conservés.</li>
-          <li><strong>Données d'utilisation :</strong> nombre de vues de profil, clics WhatsApp, clics appel (pour les prestataires).</li>
-          <li><strong>Données techniques :</strong> informations sur votre appareil (marque, modèle, système d'exploitation) pour des raisons de sécurité.</li>
+          <li><strong>Informations de création de compte :</strong> Nom, prénom, adresse e-mail, numéro de téléphone, et mot de passe.</li>
+          <li><strong>Informations de profil professionnel (Prestataires, Livreurs, Coursiers, Vendeurs) :</strong> Photos de profil, profession ou métier, ville ou zone d'activité, type de véhicule, et votre Numéro d'Identification Nationale (NIN) utilisé exclusivement à des fins de vérification de sécurité.</li>
+          <li><strong>Données de localisation :</strong> Avec votre autorisation, nous collectons votre position GPS exacte ou approximative pour vous afficher les prestataires et livreurs les plus proches de vous (géolocalisation).</li>
+          <li><strong>Données d'utilisation et d'interaction :</strong> Historique de vos demandes de services, clics sur les boutons &laquo;&nbsp;Appel&nbsp;&raquo; et &laquo;&nbsp;WhatsApp&nbsp;&raquo;, et nombre de vues sur les profils.</li>
+          <li><strong>Informations de l'appareil :</strong> Modèle du téléphone, version du système d'exploitation, et identifiants uniques de l'appareil (pour l'envoi de notifications Push).</li>
         </ul>
 
-        <h2>3. Utilisation des données</h2>
-        <p>Vos données sont utilisées exclusivement pour :</p>
+        <h2>2. Comment utilisons-nous vos données ?</h2>
+        <p>Nous utilisons vos données personnelles dans les buts suivants :</p>
         <ul>
-          <li>Créer et gérer votre compte utilisateur.</li>
-          <li>Vous mettre en relation avec des prestataires ou des clients.</li>
-          <li>Vérifier l'identité des prestataires inscrits (NIN, CIN).</li>
-          <li>Améliorer les fonctionnalités de l'application et résoudre les bugs techniques (via les données de l'appareil).</li>
-          <li>Vous envoyer des notifications liées à l'utilisation de l'application.</li>
-          <li>Détecter les activités suspectes et sécuriser votre compte.</li>
+          <li><strong>Mise en relation :</strong> Permettre aux clients de trouver, d'appeler ou de contacter via WhatsApp les prestataires et livreurs locaux.</li>
+          <li><strong>Sécurité et Confiance :</strong> Vérifier l'identité des professionnels (via le NIN) pour garantir un environnement sécurisé pour tous nos utilisateurs.</li>
+          <li><strong>Fonctionnalité de l'application :</strong> Assurer le bon fonctionnement des demandes de services, des historiques, et du système de favoris.</li>
+          <li><strong>Amélioration du service :</strong> Analyser les statistiques d'utilisation (ex: nombres de vues d'un profil) pour optimiser l'affichage et les performances de l'application.</li>
+          <li><strong>Communication :</strong> Vous envoyer des notifications Push liées à vos demandes de service (demande acceptée, annulée, etc.) ou des annonces importantes.</li>
         </ul>
 
-        <h2>4. Partage des données</h2>
+        <h2>3. Partage de vos informations</h2>
         <p>
-          Wallu ne vend jamais vos données personnelles à des tiers. Elles peuvent être partagées avec :
+          Nous ne vendons, ne louons, ni ne commercialisons vos données personnelles à des tiers. Cependant, pour que le service fonctionne, certaines de vos données sont partagées de la manière suivante :
         </p>
         <ul>
-          <li><strong>Firebase (Google) :</strong> pour l'authentification et le stockage sécurisé des données.</li>
-          <li><strong>Cloudinary :</strong> pour le stockage sécurisé des images.</li>
-          <li><strong>Google Gemini :</strong> pour le traitement des requêtes de l'assistant IA vocal. Les données sont traitées de manière anonyme.</li>
+          <li><strong>Entre utilisateurs :</strong> Si vous êtes un professionnel (prestataire, livreur, etc.), votre nom, numéro de téléphone, ville et type de service sont publics dans l'application pour que les clients puissent vous contacter. Si vous êtes un client faisant une demande, vos informations de base sont transmises au prestataire choisi.</li>
+          <li><strong>Fournisseurs de services (Sous-traitants) :</strong> Nous utilisons des services tiers hautement sécurisés (comme Google Firebase) pour héberger nos bases de données, gérer l'authentification et envoyer des notifications.</li>
         </ul>
+
+        <h2>4. Sécurité de vos données</h2>
+        <p>
+          Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles conformes aux standards de l'industrie pour protéger vos données contre tout accès non autorisé, altération, divulgation ou destruction. Les mots de passe sont cryptés, et l'accès à notre base de données est strictement restreint.
+        </p>
 
         <h2>5. Conservation des données</h2>
         <p>
-          Vos données sont conservées tant que votre compte est actif. Vous pouvez demander la suppression de votre compte à tout moment depuis la section <strong>Paramètres</strong> de l'application. Toutes vos données seront alors supprimées définitivement.
+          Nous conservons vos données personnelles tant que votre compte Wallu est actif. Vous pouvez à tout moment choisir de passer votre profil professionnel en mode &laquo;&nbsp;Indisponible&nbsp;&raquo; pour ne plus apparaître dans les recherches, ou utiliser l'option de &laquo;&nbsp;Suppression de profil&nbsp;&raquo; directement depuis l'application.
         </p>
 
-        <h2>6. Sécurité</h2>
-        <p>
-          Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, perte ou destruction. L'accès aux données est strictement limité aux membres de l'équipe Wallu.
-        </p>
-
-        <h2>7. Vos droits</h2>
-        <p>Conformément aux lois en vigueur, vous disposez des droits suivants :</p>
+        <h2>6. Vos droits</h2>
+        <p>Conformément à la législation en vigueur sur la protection des données personnelles (notamment la CDP au Sénégal), vous disposez des droits suivants :</p>
         <ul>
-          <li>Droit d'accès à vos données personnelles.</li>
-          <li>Droit de rectification de vos données inexactes.</li>
-          <li>Droit à l'effacement (suppression de compte).</li>
-          <li>Droit d'opposition au traitement de vos données.</li>
+          <li><strong>Droit d'accès et de rectification :</strong> Vous pouvez modifier à tout moment vos informations (nom, téléphone, ville, photo) directement depuis l'onglet Paramètres de l'application.</li>
+          <li><strong>Droit à l'effacement :</strong> Vous pouvez supprimer définitivement votre compte et toutes les données associées en utilisant le bouton &laquo;&nbsp;Supprimer le compte&nbsp;&raquo; dans les paramètres.</li>
+          <li><strong>Droit de retrait du consentement :</strong> Vous pouvez désactiver à tout moment l'accès au GPS ou aux notifications Push depuis les réglages de votre téléphone.</li>
         </ul>
-        <p>Pour exercer ces droits, contactez-nous à : <a href="mailto:assane-service@wallu.sn">assane-service@wallu.sn</a></p>
 
-        <h2>8. Modifications</h2>
+        <h2>7. Modifications de la Politique de Confidentialité</h2>
         <p>
-          Nous pouvons mettre à jour cette Politique de Confidentialité à tout moment. Toute modification sera signalée par une notification dans l'application et/ou par e-mail.
+          Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. En cas de changement majeur, nous vous en informerons via une notification dans l'application ou par e-mail.
         </p>
 
-        <h2>9. Contact</h2>
-        <p>Pour toute question concernant cette politique de confidentialité ou vos données, vous pouvez nous joindre directement :</p>
-        
-        <div className="contact-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin-top:20px;">
-          <div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:14px; padding:20px;">
-            <div style="font-size:0.95rem; font-weight:700; color:#062F51; margin-bottom:14px; display:flex; align-items:center; gap:8px;">
+        <h2>8. Nous contacter</h2>
+        <p>Pour toute question concernant cette politique de confidentialité, ou pour exercer vos droits relatifs à vos données personnelles, veuillez nous contacter aux adresses suivantes :</p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-card-title">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#062F51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
               Direction &amp; Partenariats
             </div>
-            <div style="display:flex; align-items:center; gap:10px; color:#475569; font-size:0.95rem; margin-bottom:8px;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#062F51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="#062F51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               <a href="tel:+221783838855">+221 78 383 88 55</a>
             </div>
-            <div style="display:flex; align-items:center; gap:10px; color:#475569; font-size:0.95rem;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#062F51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="#062F51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
               <a href="mailto:assane-service@wallu.sn">assane-service@wallu.sn</a>
             </div>
           </div>
 
-          <div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:14px; padding:20px;">
-            <div style="font-size:0.95rem; font-weight:700; color:#062F51; margin-bottom:14px; display:flex; align-items:center; gap:8px;">
+          <div class="contact-card">
+            <div class="contact-card-title">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#062F51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
               Support Technique &amp; Développement
             </div>
-            <div style="display:flex; align-items:center; gap:10px; color:#475569; font-size:0.95rem; margin-bottom:8px;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#062F51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="#062F51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               <a href="tel:+221777542053">+221 77 754 20 53</a>
             </div>
-            <div style="display:flex; align-items:center; gap:10px; color:#475569; font-size:0.95rem; margin-bottom:8px;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#062F51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="#062F51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
               <a href="mailto:support@wallu.sn">support@wallu.sn</a>
             </div>
-            <div style="display:flex; align-items:center; gap:10px; color:#475569; font-size:0.95rem;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#062F51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <a href="mailto:momardiop091@gmail.com">momardiop091@gmail.com</a>
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="#062F51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:momardiop0311@gmail.com">momardiop0311@gmail.com</a>
             </div>
           </div>
         </div>
 
-        <div style="display:inline-flex; align-items:center; gap:8px; margin-top:24px; background:#F1F5F9; padding:8px 16px; border-radius:30px; font-size:0.9rem; font-weight:600; color:#062F51;">
+        <div class="location-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#062F51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           Dakar, République du Sénégal
         </div>
